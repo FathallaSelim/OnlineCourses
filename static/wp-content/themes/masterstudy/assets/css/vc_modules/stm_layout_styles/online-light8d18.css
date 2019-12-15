@@ -1,0 +1,48 @@
+/* line 1, assets/scss/vc_modules/stm_layout_styles/online-light.scss */
+.blog_layout_grid .post_list_item_title {
+  font-size: 19px;
+  line-height: 31px;
+  word-spacing: 0;
+  letter-spacing: 0; }
+
+/* line 8, assets/scss/vc_modules/stm_layout_styles/online-light.scss */
+.widget_stm_recent_posts .widget_media img {
+  margin-top: 7px; }
+
+/* line 12, assets/scss/vc_modules/stm_layout_styles/online-light.scss */
+.stm_lms_courses__single .star-rating {
+  margin-top: 4px !important; }
+
+/* line 16, assets/scss/vc_modules/stm_layout_styles/online-light.scss */
+.stats_counter .stats_counter_title {
+  font-weight: 300; }
+
+/* line 20, assets/scss/vc_modules/stm_layout_styles/online-light.scss */
+.btn {
+  font-weight: 600; }
+
+/* line 24, assets/scss/vc_modules/stm_layout_styles/online-light.scss */
+.stm_theme_wpb_video_wrapper .stm_video_preview:after {
+  margin-top: -50px;
+  margin-left: -50px;
+  width: 100px;
+  height: 100px;
+  background-color: #195ec8;
+  border-color: #195ec8 !important;
+  box-shadow: 0 12px 8px rgba(0, 0, 0, 0.2); }
+
+/* line 34, assets/scss/vc_modules/stm_layout_styles/online-light.scss */
+.stm_theme_wpb_video_wrapper .stm_video_preview:before {
+  margin-top: -17px;
+  margin-left: -10px;
+  border-width: 17px 0 17px 31px;
+  border-color: transparent transparent transparent #fff;
+  z-index: 20; }
+
+/* line 42, assets/scss/vc_modules/stm_layout_styles/online-light.scss */
+.widget_stm_recent_posts .widget_media img {
+  margin-top: 0; }
+
+/* line 46, assets/scss/vc_modules/stm_layout_styles/online-light.scss */
+.widget_pages ul.style_2 li {
+  margin-bottom: 17px; }

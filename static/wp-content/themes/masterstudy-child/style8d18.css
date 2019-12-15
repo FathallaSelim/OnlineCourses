@@ -1,0 +1,302 @@
+/*
+	Theme Name: Master Study Child
+	Theme URI: http://stylemix.net
+	Description: MasterStudy Child Theme
+	Author: StylemixThemes
+	Author URI: http://stylemix.net
+	Template: masterstudy
+	Version: 3.0.5
+	License: GNU General Public License v2 or later
+	License URI: http://www.gnu.org/licenses/gpl-2.0.html
+	Tags: classes, courses, education, education center, learning center, tutoring, teaching, study, studying, learning, lessons, instructor, teacher, mentor
+	Text Domain: masterstudy-child
+*/
+
+
+
+/* UPD SEPT */
+@media (max-width: 400px) {
+    .course-title-holder {
+        padding-right: 5px;
+    }
+}
+
+@media(max-width: 480px){
+    .woocommerce-MyAccount-navigation ul {
+        padding-left: 0;
+    }
+    .woocommerce-MyAccount-navigation ul li {
+        display: block;
+    }
+}
+
+@media (max-width: 767px) {
+    .table-responsive>.table>tbody>tr>td,
+    .table-responsive>.table>tbody>tr>th,
+    .table-responsive>.table>tfoot>tr>td,
+    .table-responsive>.table>tfoot>tr>th,
+    .table-responsive>.table>thead>tr>td,
+    .table-responsive>.table>thead>tr>th {
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+@media (max-width: 655px) {
+    .course_table tr td.number.number-visible.title, .course_table tr td.title {
+        padding-left: 20px;
+        display: block;
+        width: 100%;
+    }
+    .course_table tr td.stm_badge {
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+    .course_table tr td .meta {
+        padding-left: 12px;
+    }
+    .course_table tr td.stm_badge .badge_unit {
+        margin-left: 15px;
+    }
+    .woocommerce-message {
+        padding-right: 26px;
+    }
+    .woocommerce-message .button {
+        position: static;
+        float: none;
+        display: block;
+    }
+    .woocommerce-message .button:after {
+        display: none;
+    }
+    .shop_table > tbody > tr td.actions {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .woocommerce .shop_table.cart .coupon .button {
+        display: block;
+        margin-top: 15px;
+    }
+    .woocommerce .shop_table.cart .coupon {
+        float: none;
+        margin-bottom: 30px;
+    }
+    .woocommerce .shop_table.cart .button.update-cart {
+        float: none;
+        margin-bottom: 15px;
+    }
+}
+
+.tp-caption .icon_in_btn {
+    text-align: center !important;
+}
+
+@media (max-width: 991px){
+    .overflowed_content .wpb_column .vc_column-inner{
+        margin-top: 0 !important;
+    }
+}
+
+body .vc_row[data-vc-full-width] {
+    overflow: visible;
+}
+body .vc_row[data-vc-full-width].vc_parallax {
+    overflow: hidden;
+}
+
+/* Woo My Account Tabs*/
+.woocommerce-account .woocommerce-MyAccount-navigation {
+    display: table;
+    float: none;
+    width: 100%; }
+.woocommerce-account .woocommerce-MyAccount-content {
+    float: none;
+    width: 100%;
+}
+.woocommerce-MyAccount-navigation ul {
+    display: table !important;
+    table-layout: fixed;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 30px; }
+.woocommerce-MyAccount-navigation  ul > li {
+    display: table-cell; }
+.woocommerce-MyAccount-navigation  ul > li > a {
+    display: block;
+    padding: 12px 20px;
+    background-color: #457992;
+    border: 0;
+    border-left: 1px solid #fff;
+    border-radius: 0;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 14px;}
+.woocommerce-MyAccount-navigation  ul > li.is-active a,
+.woocommerce-MyAccount-navigation  ul > li a:hover,
+.woocommerce-MyAccount-navigation  ul > li a:focus {
+    background-color: #f0f2f5;
+    color: #457992; }
+.woocommerce div.product form.cart .variations td.label {
+    display: none;
+}
+.woocommerce-product-gallery {
+    position: relative;
+    margin-bottom: 3em
+}
+.woocommerce-product-gallery figure {
+    margin: 0
+}
+a.woocommerce-LoopProduct-link.woocommerce-loop-product__link {
+    z-index: 9 !important;
+}
+.stm_archive_product_inner_unit .stm_archive_product_inner_unit_centered .stm_featured_product_price .price h5 {
+    font-weight: normal;
+}
+.widget_stm_recent_posts span.h6 {
+    display: inline !important;
+}
+.widget_stm_recent_posts .cats_w {
+    margin-left: 83px;
+}
+
+.stm_lms_login_wrapper .form-group label span {
+    font-weight: 400;
+    text-transform: none;
+}
+
+#switcher #theme-list #theme-select a {
+    line-height: 28px;
+}
+
+#switcher #theme-list a {
+    line-height: 28px;
+}
+
+#switcher #theme-list ul li {
+    margin-bottom: 0;
+}
+
+.switcher__link {
+    line-height: 15px;
+}
+
+#switcher .close {
+    opacity: 0.5;
+}
+
+#switcher .close a {
+    line-height: 55px !important;
+}
+
+.stm_lms_badge_menu > a {
+    position: relative;
+}
+
+.stm_lms_badge_menu > a:after {
+    content: attr(title);
+    position: absolute;
+    right: -12px;
+    top: -6px;
+    background: #dc1245;
+    color: #fff;
+    padding: 0px 5px;
+    font-size: 8px;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 3px;
+    border-bottom-left-radius: 0;
+    line-height: 14px;
+    /*background: -webkit-linear-gradient(135deg, #EE7752, #E73C7E, #23A6D5, #23D5AB) !important;*/
+    /*background: -o-linear-gradient(135deg, #EE7752, #E73C7E, #23A6D5, #23D5AB) !important;*/
+    /*background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB) !important;*/
+    /*-webkit-animation: Gradient 15s ease infinite;*/
+    /*animation: Gradient 15s ease infinite;*/
+    /*background-size: 400% 400% !important;*/
+}
+
+@media (max-width: 992px) {
+    .stm_lms_badge_menu > a:after {
+        display: none !important;
+    }
+}
+
+@-webkit-keyframes Gradient {
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@-moz-keyframes Gradient {
+    0% {
+        background-position: 0 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0 50%
+    }
+}
+
+@keyframes Gradient {
+    0% {
+        background-position: 0 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0 50%
+    }
+}
+
+.wp-social-login-widget {
+    float: none !important;
+    margin-bottom: 30px;
+}
+
+.stm-lms-login__top {
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.stm-lms-login__top h3 {
+    margin-bottom: 0;
+    margin-right: 15px;
+}
+
+.stm_lms_demo_login {
+    margin-left: auto;
+}
+
+.stm_lms_demo_login span {
+    color: #aaaaaa;
+}
+
+.stm_lms_demo_login a {
+    text-decoration: underline !important;
+}
+
+.modal-body .wp-social-login-widget {
+    position: absolute;
+    left: 50%;
+    bottom: 16px;
+    margin-left: -33px;
+}
+
+.modal-body .stm_lms_demo_login {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+}
