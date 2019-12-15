@@ -5,12 +5,19 @@ Online Courses Website  is scalable web application written in python (Django). 
 Assuming you use virtualenv, follow these steps to download and run the e-learning application in this directory:
 
 $ git clone https://github.com/FathallaSelim/OnlineCourses.git
+
 $ cd OnlineCourses
+
 $ virtualenv venv
+
 $ source ./venv/bin/activate
+
 $ pip install -r requirements
+
 $ python manage.py migrate
+
 $ python manage.py runserver
+
 Initial data supports 3 types of users for testing purposes:
 User (username=selim1, password=admin)
 
