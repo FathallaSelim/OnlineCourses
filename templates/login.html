@@ -1,0 +1,128 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <title>MasterStudy Online Login</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/login.css">
+</head>
+<body>
+<div class="dialog" id="jsDialog">
+    <!--Prompt popup-->
+    <div class="successbox dialogbox" id="jsSuccessTips">
+        <h1>Successfully submitted</h1>
+        <div class="close jsCloseDialog"><img
+                src="/static/images/dig_close.png"/></div>
+        <div class="cont">
+            <h2>Your request was submitted successfully！</h2>
+            <p></p>
+        </div>
+    </div>
+    <div class="noactivebox dialogbox" id="jsUnactiveForm">
+        <h1>Email verification prompt</h1>
+        <div class="close jsCloseDialog"><img
+                src="/static/images/dig_close.png"/></div>
+        <div class="center">
+            <img src="/static/images/send.png"/>
+            <p>We have sent your email<span class="green"
+                              id="jsEmailToActive">12@13.com</span>Sent a message，<br/>To keep your account secure，Please verify your email in time
+            </p>
+            <p class="a"><a class="btn" id="jsGoToEmail" target="_blank"
+                            href="http://mail.qq.com">Go to mailbox verification</a></p>
+            <p class="zy_success upmove"></p>
+            <p style="display: none;" class="sendE2">
+                No, you can view your spam and filtered emails, or you can send a verification email again（<span class="c5c">60s</span>）
+            </p>
+            <p class="sendE">No, you can view your spam and filtered messages.<br/>Can also<span
+                    class="c5c green" id="jsSenEmailAgin"
+                    style="cursor: pointer;">Send verification email again</span></p>
+        </div>
+    </div>
+</div>
+<div class="bg" id="dialogBg"></div>
+<header>
+    <div class="c-box fff-box">
+        <div class="wp header-box">
+            <p class="fl hd-tips">MasterStudy, Online learning platform!</p>
+            <ul class="fr hd-bar">
+
+                <li class="active"><a href="{% url 'login' %}">[LogIn]</a></li>
+                <li><a href="{% url 'register' %}">[Register]</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+<section>
+    <div class="c-box bg-box" style="background: url({% static '/images/workplace.jpg' %}) no-repeat;
+    background-size: cover;" >
+        <div class="login-box clearfix">
+            <div class="hd-login clearfix"
+                 style=" background:url(https://masterstudy.scdn4.secure.raxcdn.com/white-lms/wp-content/uploads/sites/7/2018/08/MasterStudy_logo.svg)
+                 no-repeat 0 center !important; ">
+                <a class="index-logo" href="{% url 'index' %}"></a>
+                <h1  style="margin-left: 30% !important; ">User LogIn</h1>
+                <a class="index-font" href="{% url 'index' %}">Back to HomePage</a>
+            </div>
+            <div class="fl slide">
+                <div class="imgslide">
+                    <ul class="imgs">
+                        <li><a href=""><img width="483" height="472"
+                                            src="/static/images/pic503.png"/></a>
+                        </li>
+                        <li><a href=""><img width="483" height="472"
+                                            src="/static/images/pic503.png"/></a>
+                        </li>
+                        <li><a href=""><img width="483" height="472"
+                                            src="/static/images/pic503.png"/></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="unslider-arrow prev"></div>
+                <div class="unslider-arrow next"></div>
+            </div>
+            <div class="fl form-box">
+                <h2>Account login</h2>
+                <form action="/login/" method="post" autocomplete="off">
+                    <input type='hidden' name='csrfmiddlewaretoken'
+                           value='mymQDzHWl2REXIfPMg2mJaLqDfaS1sD5'/>
+                    <div class="form-group marb20 {% if login_form.errors.username %}errorput{% endif %}">
+                        <label>user name</label>
+                        <input name="username" id="account_l" type="text"
+                               placeholder="Phone number / email"/>
+                    </div>
+                    <div class="form-group marb8 {% if login_form.errors.password %}errorput{% endif %}">
+                        <label>Password</label>
+                        <input name="password" id="password_l" type="password"
+                               placeholder="please enter your password"/>
+                    </div>
+                    <div class="error btns login-form-tips" id="jsLoginTips">
+                        {% for key,error in login_form.errors.items %}
+                            {{ error }}
+                        {% endfor %}
+                        {{ msg }}
+                    </div>
+                    <div class="auto-box marb38">
+
+                        <a class="fr" href="forgetpwd.html">forget password？</a>
+                    </div>
+                    <input class="btn btn-green" id="jsLoginBtn" type="submit"
+                           value="LogIn Immediately "/>
+                    <input type='hidden' name='csrfmiddlewaretoken'
+                           value='5I2SlleZJOMUX9QbwYLUIAOshdrdpRcy'/>
+                    {% csrf_token %}
+                </form>
+                <p class="form-p">MasterStudy <a href="{% url 'register' %}">[Sign Up Now]</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="/static/js/jquery.min.js" type="text/javascript"></script>
+<script src="/static/js/unslider.js" type="text/javascript"></script>
+<script src="/static/js/login.js" type="text/javascript"></script>
+</body>
+</html>

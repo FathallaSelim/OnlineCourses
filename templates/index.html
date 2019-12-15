@@ -1,0 +1,344 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %}MasterStudy Online{% endblock %}
+{% block custom_crumbs %}
+
+{% endblock %}
+
+{% block content %}
+    <div class="post_type_exist clearfix">
+        <p>
+
+            <style type='text/css'>@media (max-width: 968px) {
+                .vc_row.aed6bbdbcfb88221d9cb9b85256190b1e {
+                    background-image: none !important;
+                }
+            }
+            </style>
+            <style type='text/css'>@media (max-width: 1440px) {
+                .aed6bbdbcfb88221d9cb9b85256190b1e .stm_lms_row_animation {
+                    right: 30px !important;
+                }
+            }
+            </style>
+        </p>
+
+        <div data-vc-full-width="" data-vc-full-width-init="false"
+             class="vc_row wpb_row vc_row-fluid vc_custom_1534238310373 aed6bbdbcfb88221d9cb9b85256190b1e vc_row-has-fill row-has-animation"
+             style="background-position: 95% 90% !important;">
+
+            <div class="stm_lms_row_animation" style="top:10.5% !important;">
+                <img src="{% static 'wp-content/themes/masterstudy/partials/vc_parts/row_animations/images/base.png' %}"/>
+                <img class="book1"
+                     src="{% static 'wp-content/themes/masterstudy/partials/vc_parts/row_animations/images/book1.png' %}"/>
+                <img class="book2"
+                     src="{% static 'wp-content/themes/masterstudy/partials/vc_parts/row_animations/images/book2.png' %}"/>
+                <img class="bubblespeech"
+                     src="{% static 'wp-content/themes/masterstudy/partials/vc_parts/row_animations/images/bubblespeech.png' %}"/>
+                <img class="magnifier"
+                     src="{% static 'wp-content/themes/masterstudy/partials/vc_parts/row_animations/images/magnifier.png' %}"/>
+                <img class="moon"
+                     src="{% static 'wp-content/themes/masterstudy/partials/vc_parts/row_animations/images/moon.png' %}"/>
+            </div>
+            <div class="wpb_column vc_column_container vc_col-sm-12 vc_col-lg-7 vc_col-md-5" style="left:3% !important;>
+                <div class=" vc_column-inner
+            ">
+            <div class="wpb_wrapper">
+                <style type="text/css">@media (max-width: 1024px) {
+                    .aadf880d5c8986bd0deb6423c92c9d948 {
+                        height: 30px !important;
+                    }
+                }</style>
+                <div class="aadf880d5c8986bd0deb6423c92c9d948 vc_empty_space"
+                     style="height: 157px"><span class="vc_empty_space_inner"></span></div>
+                <div class="vc_custom_heading">
+                    <h1 style="font-size: 64px;line-height: 70px;text-align: left">
+                        Start Investing in You
+                    </h1>
+                </div>
+                <div class="vc_custom_heading vc_custom_1535366613275">
+                    <h3 style="text-align: left">
+                        With over 1200 courses in 18 subjects,
+                        you're guaranteed to find something that's right for you.
+                    </h3>
+                </div>
+                {% if request.user.is_authenticated %}
+                    <div class="vc_btn3-container vc_btn3-inline" style="left:8% !important;">
+                        <a class="btn btn-default lg"
+                           href="#" title="">You Already Join
+                        </a>
+                    </div>
+                {% else %}
+                    <div class="vc_btn3-container vc_btn3-inline" style="left:8% !important;">
+                        <a class="btn btn-default lg"
+                           href="{% url 'login' %}?next={{ request.path }}" title="">Join for free
+                        </a>
+                    </div>
+                {% endif %}
+
+                <div class="aa3e9b2585d5e7d5f6c929d0beab1846e vc_empty_space"
+                     style="height: 75px"><span class="vc_empty_space_inner"></span></div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <div class="banner">
+        <div class="wp">
+            <div class="fl">
+                <div class="imgslide" style="left:15% !important; top:-10px !important;">
+                    <ul class="imgs">
+                        {% for banner in all_banners %}
+                            <li>
+                                <a href="{{ banner.url }}">
+                                    <img width="1200" height="460"
+                                         src="{{ MEDIA_URL }}{{ banner.image }}"/>
+                                </a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="unslider-arrow prev"></div>
+                <div class="unslider-arrow next"></div>
+            </div>
+
+        </div>
+
+
+    </div>
+    <!--banner end-->
+    <!--feature start-->
+    <div class="vc_row-full-width vc_clearfix">
+
+    </div>
+    <div class="vc_row wpb_row vc_row-fluid vc_clearfix module " style="margin-left: 0.5% !important;">
+        <div class="wpb_column vc_column_container vc_col-sm-4">
+            <div class="vc_column-inner">
+                <div class="wpb_wrapper">
+                    <div class="icon_box vc_custom_1535366761423 stm_icon_box_hover_top standart module__f3eac30ffcdce927d15c39838e8e910f clearfix">
+                        <div class="icon_alignment_center">
+                            <div class="icon"><i class="stmlms-world"></i>
+                            </div>
+                            <div class="icon_text"><h4 style="color:#273044"> Worldwide Recognize</h4>
+                                <p>Our online course certificates can be used around the world and also in
+                                    most popular universities and companies.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wpb_column vc_column_container vc_col-sm-4">
+            <div class="vc_column-inner">
+                <div class="wpb_wrapper">
+                    <div class="icon_box vc_custom_1535366769840 stm_icon_box_hover_top standart module__df9ceca0e8527971a2077ab928c0fe8f clearfix">
+                        <div class="icon_alignment_center">
+                            <div class="icon"><i class="stmlms-screen"></i></div>
+                            <div class="icon_text"><h4 style="color:#273044"> Mostly Online Learning
+                                (sd)</h4>
+                                <p>Masterstudy online certificates can be obtained in a range of specialized
+                                    areas and typically take about a year to complete.</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wpb_column vc_column_container vc_col-sm-4">
+            <div class="vc_column-inner">
+                <div class="wpb_wrapper">
+                    <div class="icon_box vc_custom_1535366786219 stm_icon_box_hover_top standart module__8c3033ebf56b4b964392037df86f8ff0 clearfix">
+                        <div class="icon_alignment_center">
+                            <div class="icon"><i class="stmlms-calendar"></i></div>
+                            <div class="icon_text"><h4 style="color:#273044"> Graduate in as little as 1
+                                Year</h4>
+                                <p>Online post-graduate certificates are a popular way to develop your
+                                    professional qualifications of Masterstudy</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--feature end-->
+    <!--module1 start-->
+    <section>
+        <div class="module">
+            <div class="wp">
+                <h1>Public courses</h1>
+                <div class="module1 eachmod">
+                    <div class="module1_1 left">
+                        <img width="228" height="614"
+                             src="/static/images/module1_1.jpg"/>
+                        <p class="fisrt_word">Teachers teach<br/>Professional authority</p>
+
+                        <a class="more " style="position: absolute;top:40%; " href="{% url 'courses:course_list' %}">
+                            More Courses </a>
+                    </div>
+                    <div class="right group_list">
+                        <div class="module1_2 box">
+                            <div class="imgslide2">
+                                <ul class="imgs">
+                                    {% for banner_course in banner_courses %}
+                                        <li>
+                                            <a href="{% url 'courses:course_detail' banner_course.id %}">
+                                                <img width="" height=""
+                                                     style="position: absolute;top:2.5%;left:2.5%;max-width: 95%;max-height: 95%;"
+                                                     src="{{ MEDIA_URL }}{{ banner_course.image }}"/>
+                                            </a>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                            <div class="unslider-arrow2 prev"></div>
+                            <div class="unslider-arrow2 next"></div>
+                        </div>
+
+                        {% for course in courses %}
+                            <div class="module1_{{ forloop.counter|add:2 }} box">
+                                <a href="{% url 'courses:course_detail' course.id %}">
+                                    <img width="233" height="190"
+                                         src="{{ MEDIA_URL }}{{ course.image }}"/>
+                                </a>
+                                <div class="des">
+                                    <a href="{% url 'courses:course_detail' course.id %}">
+                                        <h2 title=" django">{{ course.name }}</h2>
+                                    </a>
+                                    <span class="fl">Difficulty：<i
+                                            class="key">{{ course.get_degree_display }}</i></span>
+                                    <span class="fr">learners：{{ course.students }}</span>
+                                </div>
+                                <div class="bottom">
+                                    <span class="fl" title="MasterStudy">{{ course.course_org.name }}</span>
+                                    <span class="star fr">{{ course.fav_nums }}</span>
+                                </div>
+                            </div>
+                        {% endfor %}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="module greybg">
+            <div class="wp">
+                <h1>Course organization</h1>
+                <div class="module3 eachmod">
+                    <div class="module3_1 left">
+                        <img width="228" height="463"
+                             src="/static/images/module3_1.jpg"/>
+                        <p class="fisrt_word">Arrival of famous schools<br/>Certification authority</p>
+                        <a class="more " style="position: absolute;top:60%; " href="{% url 'organizations:org_list' %}">More </a>
+                    </div>
+                    <div class="right">
+                        <ul>
+                            {% for org in course_orgs %}
+                                <li class="{% if forloop.counter|divisibleby:5 %}five{% endif %}">
+                                    <a href="{% url 'organizations:org_home' org.id %}">
+                                        <div class="company">
+                                            <img width="184" height="100"
+                                                 src="{{ MEDIA_URL }}{{ org.image }}"/>
+                                            <div class="score">
+                                                <div class="circle">
+                                                    <h2>{{ org.tag }}</h2>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p><span class="key" title="{{ org.name }}">{{ org.name }}</span></p>
+                                    </a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="vc_row-full-width vc_clearfix"></div>
+    <div data-vc-full-width="" data-vc-full-width-init="false" data-vc-stretch-content="true"
+         class="vc_row wpb_row vc_row-fluid vc_custom_1531830215765 vc_row-no-padding" >
+        <div class="wpb_column vc_column_container vc_col-sm-12" >
+            <div class="vc_column-inner">
+                <div class="wpb_wrapper">
+                    <div class="stm_testimonials_wrapper_style_2">
+                        <div class="stm_lms_testimonials_single stm_carousel_glitch"
+                             style='background-image : url({%static 'wp-content/uploads/sites/7/2018/07/brooke-cagle-224821-unsplash-1-1920x700.jpg' %});'>
+                            <div class="container">
+                                <div class="stm_lms_testimonials_single__content">
+                                    <div class="stm_lms_testimonials_single__title"><h3>Come as you are</h3>
+                                    </div>
+                                    <div class="stm_lms_testimonials_single__excerpt heading_font"><p>
+                                        MasterStudy used is an excellent workshop whether you come as a
+                                        counselor, advisor, administrator, or faculty member. I am going
+                                        home empowered. I am looking forward to attending the On Course
+                                        MasterStudy and the MasterStudy National Conference next year and
+                                        facilitating the use of this excellent retention/student success
+                                        course at my college.</p></div>
+                                    <div class="stm_lms_testimonials_single__testimonial_user heading_font">
+                                        Tim Sab
+                                    </div>
+                                    <div class="stm_lms_testimonials_single__testimonial_profession">
+                                        General Developer, Stylemix Themes
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stm_lms_testimonials_single stm_carousel_glitch"
+                             style='background-image : url({% static 'wp-content/uploads/sites/7/2018/07/micah-296507-unsplash-1-copy-1-1920x700.jpg' %});'>
+                            <div class="container">
+                                <div class="stm_lms_testimonials_single__content">
+                                    <div class="stm_lms_testimonials_single__title"><h3>Paints of the
+                                        Future</h3></div>
+                                    <div class="stm_lms_testimonials_single__excerpt heading_font"><p>The
+                                        response to your MasterStudy has been really overwhelming! Those who
+                                        participated in the workshop are spreading the word here on campus
+                                        and the “buzz” is on. The VP of Instruction wants you to come back!
+                                        Her goal is to have more faculty trained. She also wants to attend a
+                                        workshop herself. Our President told me Masterstudy needs to be the
+                                        cornerstone of our success program.”</p></div>
+                                    <div class="stm_lms_testimonials_single__testimonial_user heading_font">
+                                        Xatashi Froust
+                                    </div>
+                                    <div class="stm_lms_testimonials_single__testimonial_profession"> SEO,
+                                        Froust Inc
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stm_lms_testimonials_single stm_carousel_glitch"
+                             style='background-image : url({%static 'wp-content/uploads/sites/7/2018/07/testimonial-1-1917x640.jpg' %});'>
+                            <div class="container">
+                                <div class="stm_lms_testimonials_single__content">
+                                    <div class="stm_lms_testimonials_single__title"><h3>Investing for Your
+                                        Future</h3></div>
+                                    <div class="stm_lms_testimonials_single__excerpt heading_font"><p>It is
+                                        no exaggeration to say this MasterStudy experience was
+                                        transformative–both professionally and personally. This workshop
+                                        will long remain a high point of my life. Thanks again…. I am
+                                        feeling energized and eager to start teaching my class next week. I
+                                        can’t wait to use all of my new teaching tools. I will absolutely
+                                        recommend this workshop to other educators!</p></div>
+                                    <div class="stm_lms_testimonials_single__testimonial_user heading_font">
+                                        Linda Green
+                                    </div>
+                                    <div class="stm_lms_testimonials_single__testimonial_profession">
+                                        Product Manager, Apple Inc
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block custom_js %}
+    <script type="text/javascript" src="/static/js/index.js"></script>
+{% endblock %}
+

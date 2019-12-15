@@ -1,0 +1,210 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+
+{% block custom_crumbs %}
+    <!--crumbs start-->
+
+    <section>
+        <div class="wp">
+            <div class="crumbs">
+                <ul>
+                    <li><a href="{% url 'index' %}">Home</a>></li>
+                    <li><a href="{% url 'courses:course_list' %}">Courses</a>></li>
+                    <li>Course details</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block content %}
+    <section>
+        <div class="wp">
+            <div class="groupPurchase_detail detail">
+                <div class="toppro">
+                    <div class="left">
+                        <div class="picbox">
+                            <div class="tb-booth tb-pic">
+                                <img width="440" height="445" src="{{ MEDIA_URL }}{{ course.image }}" class="jqzoom"/>
+                            </div>
+
+                        </div>
+                        <div class="des">
+                            <h1>{{ course.name }}</h1>
+                            <span class="key">{{ course.desc }}</span>
+                            <div class="prize">
+                                <span class="fl">Difficulty：<i class="key">{{ course.get_degree_display }}</i></span>
+                                <span class="fr">Number of learners：{{ course.students }}</span>
+                            </div>
+                            <ul class="parameter">
+                                <li><span class="pram word3">Duration：</span><span>{{ course.learning_time }}</span>
+                                </li>
+                                <li><span
+                                        class="pram word3">Chapter Number：</span><span>{{ course.get_chapter_nums }}</span>
+                                </li>
+                                <li><span class="pram word3">Course category：</span><span
+                                        title="">{{ course.category }}</span></li>
+                                <li class="piclist"><span class="pram word4">Learning users：</span>
+                                    {% for user_course in course.get_learning_users %}
+                                        <span class="pic"><img width="40" height="40" src="
+                                                {{ MEDIA_URL }}{{ user_course.user.image }}"/></span>
+                                    {% endfor %}
+                                </li>
+                            </ul>
+                            <div class="btns">
+                                <div class="btn colectgroupbtn">
+                                    <div style="margin-top:-20px !important; ">
+                                        {% ifequal has_fav_course True %}Collected{% else %}Collect{% endifequal %}
+                                    </div>
+                                </div>
+                                <div class="buy btn">
+                                    <div style="margin-top:-20px !important;">
+                                        <a style="color: white" href="{% url 'courses:course_info' course.id %}">
+                                            {% ifequal is_attended True %}Learning{% else %}Start
+                                                Learning{% endifequal %}
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="group-share-box">
+                            <div class="bdsharebuttonbox"
+                                 data-text="django it has started"
+                                 data-desc="I found it at # Mu class network #"
+                                 data-comment=""
+                                 data-url="/group/groupdetail/15/">
+                                <span class="fl">share to：</span>
+                                <a href="#" class="bds_more" data-cmd="more"></a>
+                                <a title="Share to QQ space" href="#" class="bds_qzone" data-cmd="qzone"></a>
+                                <a title="share to Sina Weibo" href="#" class="bds_tsina" data-cmd="tsina"></a>
+                                <a title="Share on Tencent Weibo" href="#" class="bds_tqq" data-cmd="tqq"></a>
+                                <a title="Share to Renren" href="#" class="bds_renren" data-cmd="renren"></a>
+                                <a title="Share on WeChat" href="#" class="bds_weixin" data-cmd="weixin"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="head">
+                            <h2 style="margin-left:-15px !important; width: 100% !important;">Organization</h2>
+                            <p>World Famous School</p>
+                        </div>
+                        <div class="pic">
+                            <a href="/company/14/">
+                                <img width="150" height="80" src="{{ MEDIA_URL }}{{ course.course_org.image }}"/>
+                            </a>
+                        </div>
+                        <a href="/company/14/">
+                            <h2 class="center" title="Tsinghua University">{{ course.course_org.name }}</h2>
+                        </a>
+                        <div class="btn  notlogin " data-favid="14" id="jsRightBtn" style="margin-left:50px !important; ">
+                            <div style="margin-top:-15px !important; ">
+                                {% ifequal has_fav_org True %}Collected{% else %}Collect{% endifequal %}
+                            </div>
+                        </div>
+                        <div class="clear">
+                            <ul>
+                                <li>
+                                    <span>Lesson：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{ course.course_org.course_nums }}</span>
+                                </li>
+                                <li>
+                                    <span>Teach：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{ course.course_org.get_teacher_nums }}</span>
+                                </li>
+                                <li>Area：&nbsp;&nbsp;{{ course.course_org.address }}</li>
+                                <li>Approve&nbsp;:
+                                    &nbsp;&nbsp;
+                                    <img title="Gold Medal Agency" , src="{% static '/images/gold.png' %}"/>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="wp">
+            <div class="list groupPurchase_detail_pro">
+                <div class="left layout">
+                    <div class="head">
+                        <ul class="tab_header">
+                            <li class="active">Course details</li>
+                        </ul>
+                    </div>
+                    <div class="tab_cont tab_cont1">
+                        {{ course.detail }}
+                    </div>
+                    <div class="tab_cont tab_cont2">
+                        <div class="comment">
+                            <div class="comenlist">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right layout">
+                    <div class="head">Recommended Courses</div>
+                    <div class="group_recommend">
+                        {% for course in related_courses %}
+                            <dl>
+                                <dt>
+                                    <a target="_blank" href="">
+                                        <img width="240" height="220" class="scrollLoading"
+                                             src="{{ MEDIA_URL }}{{ course.image }}"/>
+                                    </a>
+                                </dt>
+                                <dd>
+                                    <a target="_blank" href=""><h2> {{ course.name }}</h2></a>
+                                    <span class="fl">Study duration：<i class="key">{{ course.learning_time }}</i></span>
+                                </dd>
+                            </dl>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block custom_js %}
+    <script type="text/javascript">
+
+        //Collection sharing
+        function add_fav(current_elem, fav_id, fav_type) {
+            $.ajax({
+                cache: false,
+                type: "POST",
+                url: "{% url 'organizations:add_fav' %}",
+                data: {'fav_id': fav_id, 'fav_type': fav_type},
+                dataType: "text",
+                async: true,
+                beforeSend: function (xhr, settings) {
+                    xhr.setRequestHeader("X-CSRFToken", "{{ csrf_token }}");
+                },
+                success: function (data) {
+                    if (data.status == 'fail') {
+                        if (data.msg == 'User is not logged in') {
+                            window.location.href = "{% url 'login' %}";
+                        } else {
+                            alert(data.msg)
+                        }
+
+                    } else if (data.status == 'success') {
+                        current_elem.text(data.msg)
+                    }
+                }
+            });
+        }
+
+        $('#jsLeftBtn').on('click', function () {
+            add_fav($(this), {{ course.id }}, 1)
+        });
+
+        $('#jsRightBtn').on('click', function () {
+            add_fav($(this), {{ course.course_org.id }}, 2)
+        });
+
+    </script>
+
+{% endblock %}

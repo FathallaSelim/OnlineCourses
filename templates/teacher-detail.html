@@ -1,0 +1,174 @@
+{% extends 'base.html' %}
+{% block title %}MasterStudy{% endblock %}
+{% block custom_crumbs %}
+<section>
+    <div class="wp">
+        <ul  class="crumbs">
+            <li><a href="{% url 'index' %}">Home</a>></li>
+            <li>Teacher Details</li>
+        </ul>
+    </div>
+</section>
+{% endblock %}
+
+{% block content %}
+    <section>
+	<div class="wp butler-detail-box butler-diaryd-box clearfix">
+        <div class="fl list">
+            <div class="butler_detail_list clearfix">
+                <div class="brief">
+                    <dl class="des">
+                        <dt>
+                            <div class="picpic">
+                                <img width="100" height="100" src="{{ MEDIA_URL }}{{ teacher.image }}"/>
+                            </div>
+                            <div class="btn">
+                                <span class="fl btn1 collectionbtn" id="jsLeftBtn">
+                                     {% ifequal has_fav_teacher True %}已收藏{% else %}收藏{% endifequal %}
+                                </span>
+                                <span class="fr btn2 shareBtn bdsharebuttonbox"
+                                      data-text="Teacher-Teacher Li"
+                                      data-desc="I'm here#MAS#Found"
+                                      data-comment="Teacher ，Working years：5 years；Education：regular college course；Company：Alibaba&nbsp;；Classic Case：Getting started with django；Getting started with flask"
+                                      data-url="/diary/hk_detail/10/">
+                                    <span class="fl">share it</span>
+                                    <a href="#" class="bds_more" data-cmd="more"></a>
+                                </span>
+                            </div>
+                        </dt>
+                        <dd>
+                            <a href="/diary/hk_detail/10/">
+                                <h1>{{ teacher.name }}<span class="key picbig">Gold Lecturer</span></h1>
+                            </a>
+                            <ul class="cont">
+                                <li>Working years：<span>{{ teacher.work_years }}Year</span></li>
+                                <li>Current company：<span>{{ teacher.work_company }}</span></li>
+                                <li>work position：<span>{{ teacher.work_position }}&nbsp;</span></li>
+                                <li>Teaching characteristics：<span>{{ teacher.points }}</span></li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="butler_detail_cont clearfix">
+                <div class="left layout">
+				<div class="head">
+					<ul class="tab_header">
+						<li class="active"><a href="/diary/hk_detail/10/">Full course</a> </li>
+					</ul>
+				</div>
+                    <div class="companycenter">
+                        <div class="group_list brief">
+                            {% for course in courses %}
+                                <div class="module1_5 box">
+                                    <a href="course-detail.html">
+                                        <img width="214" height="190" class="scrollLoading" src="{{ MEDIA_URL }}{{ course.image }}"/>
+                                    </a>
+                                    <div class="des">
+                                        <a href="course-detail.html"><h2>{{ course.name }}</h2></a>
+                                        <span class="fl">Duration：<i class="key">{{ course.learning_time }}</i></span>
+                                        <span class="fr">number of learners：{{ course.students }}</span>
+                                    </div>
+                                    <div class="bottom">
+                                        <span class="fl">{{ course.course_org }}</span>
+                                        <span class="star fr  notlogin" data-favid="15">{{ course.fav_nums }}</span>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                <!--<div class="pageturn">-->
+                    <!--<ul class="pagelist">-->
+                        <!--<li class="active"><a href="?page=1">1</a></li>-->
+                    <!--</ul>-->
+                <!--</div>-->
+            </div>
+            </div>
+        </div>
+        <div class="fr list">
+             <div class="butler_detail_list">
+                <div class="right butler-company-box">
+                <div class="head">
+                    <h1>MasterStudy</h1>
+                    <p>Well-known universities，Authority teaching</p>
+                </div>
+                <div class="pic">
+                    <a href="org-detail-homepage.html">
+                        <img width="150" height="80" src="{{ MEDIA_URL }}{{ teacher.org.image }}"/>
+                    </a>
+                </div>
+                <a href="org-detail-homepage.html">
+                    <h2 class="center">{{ teacher.org.name }}</h2>
+                </a>
+                <p class="center tell">Address：{{ teacher.org.address }}</p>
+                <a class="btn" id="jsRightBtn">{% ifequal has_fav_org True %}Collected{% else %}collect{% endifequal %}</a>
+            </div>
+            </div>
+            <div class="butler_detail_cont">
+                <div class="butler_list_box">
+                    <div class="right layout">
+                        <div class="head">Lecturer Ranking</div>
+                        {% for teacher in hottest_teachers %}
+                            <dl class="des">
+                                <span class="num fl">1</span>
+                                <a href="/org/teacher/detail/1/">
+                                    <dt>
+                                        <img width="50" height="50" class="scrollLoading" src="{{ MEDIA_URL }}{{ teacher.image }}"/>
+                                    </dt>
+                                </a>
+                                <dd>
+                                    <a href="/org/teacher/detail/1/">
+                                        <h1 title="{{ teacher.name }}">{{ teacher.name }}</h1>
+                                    </a>
+                                    <p>Working years：<span>{{ teacher.work_years }}Year</span></p>
+                                </dd>
+                            </dl>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+	</div>
+</section>
+{% endblock %}
+
+{% block custom_js %}
+<script type="text/javascript">
+//Collection sharing
+function add_fav(current_elem, fav_id, fav_type){
+    $.ajax({
+        cache: false,
+        type: "POST",
+        url:"{% url 'organizations:add_fav' %}",
+        data:{'fav_id':fav_id, 'fav_type':fav_type},
+        dataType:"text",
+        async: true,
+        beforeSend:function(xhr, settings){
+            xhr.setRequestHeader("X-CSRFToken", "{{ csrf_token }}");
+        },
+        success: function(data) {
+            if(data.status == 'fail'){
+                if(data.msg == 'User is not logged in'){
+                    window.location.href="{% url 'login' %}";
+                }else{
+                    alert(data.msg)
+                }
+
+            }else if(data.status == 'success'){
+                current_elem.text(data.msg)
+            }
+        },
+    });
+}
+
+$('#jsLeftBtn').on('click', function(){
+    add_fav($(this), {{ teacher.id }}, 3);
+});
+
+$('#jsRightBtn').on('click', function(){
+    add_fav($(this), {{ teacher.org.id }}, 2);
+});
+
+
+</script>
+{% endblock %}

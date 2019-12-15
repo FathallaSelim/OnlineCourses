@@ -1,0 +1,58 @@
+{% extends 'usercenter-base.html' %}
+{% load staticfiles %}
+{% block title %}
+<title>MasterStudy</title>
+{% endblock %}
+
+{% block crumbs %}
+    <section>
+        <div class="wp">
+            <ul  class="crumbs">
+                <li><a href="{% url 'index' %}">Home</a>></li>
+                <li><a href="/user/home/">Personal center</a>></li>
+                <li>my collection</li>
+            </ul>
+        </div>
+    </section>
+{% endblock %}
+
+
+{% block right_content %}
+    <div class="right" >
+            <div class="personal_des Releasecont">
+                <div class="head">
+                    <h1>my collection</h1>
+                </div>
+            </div>
+            <div class="personal_des permessage">
+                <div class="head">
+                    <ul class="tab_header messagehead">
+                        <li><a href="{% url 'users:fav_org' %}">Course organization</a> </li>
+                        <li><a href="{% url 'users:fav_teacher' %}">Teacher </a></li>
+                        <li class="active"><a href="{% url 'users:fav_course' %}">courses</a></li>
+                    </ul>
+
+                </div>
+                <div class="companycenter">
+                    <div class="group_list brief">
+                        {% for course in fav_course_list %}
+                            <div class="module1_5 box">
+                            <a href="{% url 'courses:course_detail' course.id %}">
+                                <img width="214" height="190" src="{{ MEDIA_URL }}{{ course.image }}"/>
+                            </a>
+                            <div class="des">
+                                <a href="{% url 'courses:course_detail' course.id %}"><h2>{{ course.name }}</h2></a>
+                                <span class="fl">Duration：<i class="key">{{ course.learning_time }}</i></span>
+                                <span class="fr">numberOfLearners：{{ course.students }}</span>
+                            </div>
+                            <div class="bottom">
+                                <span class="fl">{{ course.course_org.name }}</span>
+                                <span class="delete-group fr jsDeleteFav_course" data-favid="{{ course.id }}"></span>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+{% endblock %}

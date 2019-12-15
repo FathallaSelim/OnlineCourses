@@ -1,0 +1,1183 @@
+<!DOCTYPE html>
+<html>
+{% load staticfiles %}
+<head>
+    <title>MasterStudy</title>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/reset.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/animate.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    {% block custom_css %}{% endblock %}
+    <script src="{% static 'js/jquery.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'js/jquery-migrate-1.2.1.min.js' %}" type="text/javascript"></script>
+
+    <script>(function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+            'gtm.start':
+                new Date().getTime(), event: 'gtm.js'
+        });
+        var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src =
+            'www.googletagmanager.com/gtm5445.html?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-MLKCH25');</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="profile" href="http://gmpg.org/xfn/11">
+    <link rel="pingback" href="xmlrpc.php">
+    <link type="text/css" media="screen"
+          href="{% static 'wp-content/cache/autoptimize/7/css/autoptimize_e06d6c9350ceee6c91ac67313629c8fc.css' %}"
+          rel="stylesheet"/>
+    <style type="text/css" media="print">@media print {
+        .pmpro_a-print {
+            display: none;
+            position: absolute;
+            left: -9999px
+        }
+    }</style>
+    <link type="text/css" media="all"
+          href="{% static 'wp-content/cache/autoptimize/7/css/autoptimize_5f6911a0b42912528c11728e21c8ec7e.css' %}"
+          rel="stylesheet"/>
+    <title>Online Education and LMS WordPress Theme – Masterstudy</title>
+    <meta name="description"
+          content="Masterstudy is Education WordPress theme featured by Learning Management System (LMS) for online education business and course management."/>
+    <link rel="canonical" href="index.html"/>
+    <meta property="og:locale" content="en_US"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="Online Education and LMS WordPress Theme – Masterstudy"/>
+    <meta property="og:description"
+          content="Masterstudy is Education WordPress theme featured by Learning Management System (LMS) for online education business and course management."/>
+    <meta property="og:url" content="https://masterstudy.stylemixthemes.com/white-lms/"/>
+    <meta property="og:site_name" content="Education &amp; Online Course Management WordPress Theme – Masterstudy"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:description"
+          content="Masterstudy is Education WordPress theme featured by Learning Management System (LMS) for online education business and course management."/>
+    <meta name="twitter:title" content="Online Education and LMS WordPress Theme – Masterstudy"/>
+    <meta name="twitter:creator" content="@com"/>
+    <script type='application/ld+json' class='yoast-schema-graph yoast-schema-graph--main'>
+    {"@context":"https://schema.org",
+    "@graph":[{"@type":"WebSite","@id":"https://masterstudy.stylemixthemes.com/white-lms/#website",
+    "url":"https://masterstudy.stylemixthemes.com/white-lms/",
+    "name":"Education &amp; Online Course Management WordPress Theme \u2013 Masterstudy",
+    "potentialAction":{"@type":"SearchAction",
+    "target":"https://masterstudy.stylemixthemes.com/white-lms/?s={search_term_string}",
+    "query-input":"required name=search_term_string"}},
+    {"@type":"WebPage","@id":"https://masterstudy.stylemixthemes.com/white-lms/#webpage",
+    "url":"https://masterstudy.stylemixthemes.com/white-lms/","inLanguage":"en-US",
+    "name":"Online Education and LMS WordPress Theme \u2013 Masterstudy",
+    "isPartOf":{"@id":"https://masterstudy.stylemixthemes.com/white-lms/#website"},
+    "datePublished":"2018-05-21T05:54:48+00:00","dateModified":"2019-11-13T06:15:49+00:00",
+    "description":"Masterstudy is Education WordPress theme featured by Learning Management System (LMS) for online education business and course management."}]}
+</script>
+    <link rel='dns-prefetch' href='http://js.stripe.com/'/>
+    <link rel='dns-prefetch' href='http://www.google.com/'/>
+    <link rel='dns-prefetch' href='http://fonts.googleapis.com/'/>
+    <link rel='dns-prefetch' href='http://s.w.org/'/>
+    <link rel="alternate" type="application/rss+xml"
+          title="Education &amp; Online Course Management WordPress Theme – Masterstudy &raquo; Feed"
+          href="feed/index.html"/>
+    <link rel="alternate" type="application/rss+xml"
+          title="Education &amp; Online Course Management WordPress Theme – Masterstudy &raquo; Comments Feed"
+          href="comments/feed/index.html"/>
+    <style id='rs-plugin-settings-inline-css' type='text/css'>#rs-demo-id {
+    }</style>
+    <style id='theme-style-inline-css' type='text/css'></style>
+    <link rel='stylesheet' id='stm_theme_custom_styles-css'
+          href="{% static 'wp-content/cache/autoptimize/7/css/autoptimize_single_6d6bdd62ba43f165976d724fa8653254cb95.css' %}"
+          type='text/css' media='all'/>
+    <link rel='stylesheet' id='redux-google-fonts-stm_option-css'
+          href='https://fonts.googleapis.com/css?family=Montserrat%3A200%2C500%2C600%2C400%2C700%7COpen+Sans%3A300%2C400%2C600%2C700%2C800%2C300italic%2C400italic%2C600italic%2C700italic%2C800italic&amp;subset=latin&amp;ver=1572948413'
+          type='text/css' media='all'/>
+    <script type='text/javascript'
+            src='js/jquery/jquery4a5f.js'></script>
+    <script type='text/javascript' src='https://js.stripe.com/v3/?ver=5.2.4'></script>
+    <script type='text/javascript'>var stm_lms_vars = {
+        "symbol": "$",
+        "position": "left",
+        "currency_thousands": ","
+    };</script>
+    <link rel='https://api.w.org/' href='wp-json/index.html'/>
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc0db0.php?rsd"/>
+    <link rel="wlwmanifest" type="application/wlwmanifest+xml"
+          href="https://masterstudy.scdn4.secure.raxcdn.com/white-lms/wp-includes/wlwmanifest.xml"/>
+    <meta name="generator" content="WordPress 5.2.4"/>
+    <link rel='shortlink' href='index.html'/>
+    <link rel="alternate" type="application/json+oembed"
+          href="wp-json/oembed/1.0/embedbbb6.json?url=https%3A%2F%2Fmasterstudy.stylemixthemes.com%2Fwhite-lms%2F"/>
+    <link rel="alternate" type="text/xml+oembed"
+          href="wp-json/oembed/1.0/embedaa4f?url=https%3A%2F%2Fmasterstudy.stylemixthemes.com%2Fwhite-lms%2F&amp;format=xml"/>
+    <script type="text/javascript">var stm_lms_ajaxurl = 'wp-admin/admin-ajax.html';</script>
+    <style>.vue_is_disabled {
+        display: none;
+    }</style>
+    <script>var stm_lms_nonces = {
+        "load_modal": "ecd4ace3d1",
+        "load_content": "b0a5a5ed84",
+        "get_image_url": "53b1a4f2b0",
+        "start_quiz": "ebabf74ab5",
+        "user_answers": "d6a3154165",
+        "get_order_info": "9dd7c8c1e9",
+        "user_orders": "471639107e",
+        "stm_lms_get_instructor_courses": "353201740f",
+        "stm_lms_add_comment": "650d8834db",
+        "stm_lms_get_comments": "651f0ba88b",
+        "stm_lms_login": "0d7ab72461",
+        "stm_lms_register": "783576a975",
+        "stm_lms_become_instructor": "6aed6fdcaf",
+        "stm_lms_enterprise": "d2f61fcaba",
+        "stm_lms_get_user_courses": "65d81f40c8",
+        "stm_lms_get_user_quizzes": "bd8504a0ea",
+        "stm_lms_wishlist": "24ec5eceb6",
+        "stm_lms_save_user_info": "e25de3cb3b",
+        "stm_lms_lost_password": "94234c7abb",
+        "stm_lms_change_avatar": "00915ab3dd",
+        "stm_lms_delete_avatar": "d6ddc41312",
+        "stm_lms_complete_lesson": "4c225d53a3",
+        "stm_lms_use_membership": "fd18b996c2",
+        "stm_lms_change_featured": "a928788eb5",
+        "stm_lms_delete_course_subscription": "cdb4d2e1a3",
+        "stm_lms_get_reviews": "09e065c756",
+        "stm_lms_add_review": "2a1d39cce5",
+        "stm_lms_add_to_cart": "27b559db14",
+        "stm_lms_delete_from_cart": "0f281b9e82",
+        "stm_lms_purchase": "fa7f91805a",
+        "stm_lms_send_message": "533cdee64a",
+        "stm_lms_get_user_conversations": "7a0c36313e",
+        "stm_lms_get_user_messages": "ef4236cd28",
+        "stm_curriculum": "546425234d",
+        "stm_manage_posts": "9776336567",
+        "stm_lms_change_post_status": "720500e36c",
+        "stm_curriculum_create_item": "bdad3dcd35",
+        "stm_curriculum_get_item": "cc6a097bf1",
+        "stm_save_questions": "4eff86830f",
+        "stm_save_title": "cb60247091",
+        "stm_save_settings": "e40ed42c13",
+        "stm_lms_tables_update": "bd49ff3155",
+        "stm_lms_get_enterprise_groups": "711d18f2cc",
+        "stm_lms_get_enterprise_group": "fce0fa4431",
+        "stm_lms_add_enterprise_group": "893c36aea8",
+        "stm_lms_delete_enterprise_group": "926e9666dd",
+        "stm_lms_add_to_cart_enterprise": "fe28907be4",
+        "stm_lms_get_user_ent_courses": "8fa83af449",
+        "stm_lms_delete_user_ent_courses": "e8cc861eee",
+        "stm_lms_add_user_ent_courses": "80d9ab57f7",
+        "stm_lms_change_ent_group_admin": "629ae5077b",
+        "stm_lms_delete_user_from_group": "112b5d380c",
+        "stm_lms_import_groups": "4c30bf1f96",
+        "stm_lms_upload_file_assignment": "48bfb3e3c6",
+        "stm_lms_delete_assignment_file": "041dbc56f6",
+        "stm_lms_save_draft_content": "3ee774d5f0",
+        "stm_lms_accept_draft_assignment": "280d19a43a",
+        "stm_lms_get_assignment_data": "c32b974254",
+        "stm_lms_get_instructor_assingments": "ce38cd915a",
+        "stm_lms_get_user_assingments": "e83d23b1d2",
+        "stm_lms_edit_user_answer": "f016575ec0",
+        "stm_lms_get_user_points_history": "5f29d7492f",
+        "stm_lms_buy_for_points": "4e7fda2558",
+        "stm_lms_get_point_users": "1150cfdcb1",
+        "stm_lms_get_user_points_history_admin": "8f5b0bc6ec",
+        "stm_lms_change_points": "39d7e81e6e",
+        "stm_lms_delete_points": "0c55876e4e"
+    };</script>
+    <script>var stm_lms_pro_nonces = {
+        "stm_lms_pro_install_base": "b58f7d6a86",
+        "stm_lms_pro_search_courses": "02a36e5def",
+        "stm_lms_pro_udemy_import_courses": "7a4e1beeb1",
+        "stm_lms_pro_udemy_publish_course": "98e2654f29",
+        "stm_lms_pro_udemy_import_curriculum": "2da27a2bb1",
+        "stm_lms_pro_save_addons": "b4e8251eac",
+        "stm_lms_create_announcement": "f9ed332061",
+        "stm_lms_pro_upload_image": "68502c06d8",
+        "stm_lms_pro_get_image_data": "6a54c027f5",
+        "stm_lms_pro_save_quiz": "7cb5e54498",
+        "stm_lms_pro_save_lesson": "8095f9648e",
+        "stm_lms_pro_save_front_course": "3b080cd0ac",
+        "stm_lms_get_course_info": "7a0b996200",
+        "stm_lms_get_course_students": "216215cbac"
+    };</script>
+    <script>var ajaxurl = 'wp-admin/admin-ajax.html';
+    var stm_ajax_add_review = 'b58e1081ba';
+    var stm_install_plugin = '8e1e9387c0';
+    var stm_buddypress_groups = '6fc8b88ec3';</script>
+    <link rel="shortcut icon" type="image/x-icon"
+          href="https://masterstudy.scdn4.secure.raxcdn.com/white-lms/wp-content/themes/masterstudy/favicon.ico"/>
+    <meta name="generator" content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress."/>
+    <!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css"
+          href="https://masterstudy.scdn4.secure.raxcdn.com/white-lms/wp-content/plugins/js_composer/assets/css/vc_lte_ie9.min.css"
+          media="screen"><![endif]-->
+    <meta name="generator"
+          content="Powered by Slider Revolution 6.0.5 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface."/>
+    <script type="text/javascript">function setREVStartSize(a) {
+        try {
+            var b, c = document.getElementById(a.c).parentNode.offsetWidth;
+            if (c = 0 === c || isNaN(c) ? window.innerWidth : c, a.tabw = void 0 === a.tabw ? 0 : parseInt(a.tabw), a.thumbw = void 0 === a.thumbw ? 0 : parseInt(a.thumbw), a.tabh = void 0 === a.tabh ? 0 : parseInt(a.tabh), a.thumbh = void 0 === a.thumbh ? 0 : parseInt(a.thumbh), a.tabhide = void 0 === a.tabhide ? 0 : parseInt(a.tabhide), a.thumbhide = void 0 === a.thumbhide ? 0 : parseInt(a.thumbhide), a.mh = void 0 === a.mh || "" == a.mh ? 0 : a.mh, "fullscreen" === a.layout || "fullscreen" === a.l) b = Math.max(a.mh, window.innerHeight); else {
+                for (var d in a.gw = Array.isArray(a.gw) ? a.gw : [a.gw], a.rl) (void 0 === a.gw[d] || 0 === a.gw[d]) && (a.gw[d] = a.gw[d - 1]);
+                for (var d in a.gh = void 0 === a.el || "" === a.el || Array.isArray(a.el) && 0 == a.el.length ? a.gh : a.el, a.gh = Array.isArray(a.gh) ? a.gh : [a.gh], a.rl) (void 0 === a.gh[d] || 0 === a.gh[d]) && (a.gh[d] = a.gh[d - 1]);
+                var e, f = Array(a.rl.length), g = 0;
+                for (var d in a.tabw = a.tabhide >= c ? 0 : a.tabw, a.thumbw = a.thumbhide >= c ? 0 : a.thumbw, a.tabh = a.tabhide >= c ? 0 : a.tabh, a.thumbh = a.thumbhide >= c ? 0 : a.thumbh, a.rl) f[d] = a.rl[d] < window.innerWidth ? 0 : a.rl[d];
+                for (var d in e = f[0], f) e > f[d] && 0 < f[d] && (e = f[d], g = d);
+                var h = c > a.gw[g] + a.tabw + a.thumbw ? 1 : (c - (a.tabw + a.thumbw)) / a.gw[g];
+                b = a.gh[g] * h + (a.tabh + a.thumbh)
+            }
+            void 0 === window.rs_init_css && (window.rs_init_css = document.head.appendChild(document.createElement("style"))), document.getElementById(a.c).height = b, window.rs_init_css.innerHTML += "#" + a.c + "_wrapper { height: " + b + "px }"
+        } catch (a) {
+            console.log("Failure at Presize of Slider:" + a)
+        }
+    };</script>
+    <style type="text/css" title="dynamic-css" class="options-output">.logo-unit .logo {
+        font-family: Montserrat;
+        color: #fff;
+        font-size: 23px;
+    }
+
+    .header_top_bar, .header_top_bar a {
+        font-family: Montserrat;
+        font-weight: normal;
+        font-style: normal;
+        color: #aaaaaa;
+        font-size: 12px;
+    }
+
+    body.skin_custom_color .post_list_main_section_wrapper .post_list_meta_unit .sticky_post,
+    body.skin_custom_color .overflowed_content .wpb_column .icon_box,
+    body.skin_custom_color .stm_countdown_bg,
+    body.skin_custom_color #searchform-mobile .search-wrapper .search-submit,
+    body.skin_custom_color .header-menu-mobile .header-menu > li .arrow.active,
+    body.skin_custom_color .header-menu-mobile .header-menu > li.opened > a,
+    body.skin_custom_color mark,
+    body.skin_custom_color .woocommerce .cart-totals_wrap .shipping-calculator-button:hover,
+    body.skin_custom_color .detailed_rating .detail_rating_unit tr td.bar .full_bar .bar_filler,
+    body.skin_custom_color .product_status.new,
+    body.skin_custom_color .stm_woo_helpbar .woocommerce-product-search input[type="submit"],
+    body.skin_custom_color .stm_archive_product_inner_unit .stm_archive_product_inner_unit_centered .stm_featured_product_price .price.price_free,
+    body.skin_custom_color .sidebar-area .widget:after,
+    body.skin_custom_color .sidebar-area .socials_widget_wrapper .widget_socials li .back a,
+    body.skin_custom_color .socials_widget_wrapper .widget_socials li .back a,
+    body.skin_custom_color .widget_categories ul li a:hover:after,
+    body.skin_custom_color .event_date_info_table .event_btn .btn-default,
+    body.skin_custom_color .course_table tr td.stm_badge .badge_unit.quiz,
+    body.skin_custom_color div.multiseparator:after,
+    body.skin_custom_color .page-links span:hover,
+    body.skin_custom_color .page-links span:after,
+    body.skin_custom_color .page-links > span:after,
+    body.skin_custom_color .page-links > span,
+    body.skin_custom_color .stm_post_unit:after,
+    body.skin_custom_color .blog_layout_grid .post_list_content_unit:after,
+    body.skin_custom_color ul.page-numbers > li a.page-numbers:after,
+    body.skin_custom_color ul.page-numbers > li span.page-numbers:after,
+    body.skin_custom_color ul.page-numbers > li a.page-numbers:hover,
+    body.skin_custom_color ul.page-numbers > li span.page-numbers:hover,
+    body.skin_custom_color ul.page-numbers > li a.page-numbers.current:after,
+    body.skin_custom_color ul.page-numbers > li span.page-numbers.current:after,
+    body.skin_custom_color ul.page-numbers > li a.page-numbers.current,
+    body.skin_custom_color ul.page-numbers > li span.page-numbers.current,
+    body.skin_custom_color .triangled_colored_separator,
+    body.skin_custom_color .magic_line,
+    body.skin_custom_color .navbar-toggle .icon-bar,
+    body.skin_custom_color .navbar-toggle:hover .icon-bar,
+    body.skin_custom_color #searchform .search-submit,
+    body.skin_custom_color .header_main_menu_wrapper .header-menu > li > ul.sub-menu:before,
+    body.skin_custom_color .search-toggler:after,
+    body.skin_custom_color .modal .popup_title,
+    body.skin_custom_color .widget_pages ul.style_2 li a:hover:after,
+    body.skin_custom_color .sticky_post,
+    body.skin_custom_color .btn-carousel-control:after,
+    .primary_bg_color,
+    .mbc,
+    .stm_lms_courses_carousel_wrapper .owl-dots .owl-dot.active,
+    .stm_lms_courses_carousel__term.active,
+    body.course_hub .header_default.header_2,
+    .triangled_colored_separator:before,
+    .triangled_colored_separator:after,
+    body.skin_custom_color.udemy .btn-default,
+    body.skin_custom_color.udemy .nav.nav-tabs > li.active a,
+    .single_instructor .stm_lms_courses .stm_lms_load_more_courses,
+    .single_instructor .stm_lms_courses .stm_lms_load_more_courses:hover,
+    body.skin_custom_color.language_center .btn-default {
+        background-color: #4ed7a8;
+    }
+
+    body.skin_custom_color ul.page-numbers > li a.page-numbers:hover,
+    body.skin_custom_color ul.page-numbers > li a.page-numbers.current,
+    body.skin_custom_color ul.page-numbers > li span.page-numbers.current,
+    body.skin_custom_color .custom-border textarea:active,
+    body.skin_custom_color .custom-border input[type=text]:active,
+    body.skin_custom_color .custom-border input[type=email]:active,
+    body.skin_custom_color .custom-border input[type=number]:active,
+    body.skin_custom_color .custom-border input[type=password]:active,
+    body.skin_custom_color .custom-border input[type=tel]:active,
+    body.skin_custom_color .custom-border .form-control:active,
+    body.skin_custom_color .custom-border textarea:focus,
+    body.skin_custom_color .custom-border input[type=text]:focus,
+    body.skin_custom_color .custom-border input[type=email]:focus,
+    body.skin_custom_color .custom-border input[type=number]:focus,
+    body.skin_custom_color .custom-border input[type=password]:focus,
+    body.skin_custom_color .custom-border input[type=tel]:focus,
+    body.skin_custom_color .custom-border .form-control:focus,
+    body.skin_custom_color .icon-btn:hover .icon_in_btn,
+    body.skin_custom_color .icon-btn:hover,
+    body.skin_custom_color .average_rating_unit,
+    body.skin_custom_color blockquote,
+    body.skin_custom_color .tp-caption .icon-btn:hover .icon_in_btn,
+    body.skin_custom_color .tp-caption .icon-btn:hover,
+    body.skin_custom_color .stm_theme_wpb_video_wrapper .stm_video_preview:after,
+    body.skin_custom_color .btn-carousel-control,
+    body.skin_custom_color .post_list_main_section_wrapper .post_list_meta_unit .post_list_comment_num,
+    body.skin_custom_color .post_list_main_section_wrapper .post_list_meta_unit,
+    body.skin_custom_color .search-toggler:hover,
+    body.skin_custom_color .search-toggler,
+    .stm_lms_courses_carousel_wrapper .owl-dots .owl-dot.active,
+    .triangled_colored_separator .triangle:before {
+        border-color: #4ed7a8;
+    }
+
+    body.skin_custom_color .icon-btn:hover .icon_in_btn,
+    body.skin_custom_color .icon-btn:hover .link-title,
+    body.skin_custom_color .stats_counter .h1,
+    body.skin_custom_color .event_date_info .event_date_info_unit .event_labels,
+    body.skin_custom_color .event-col .event_archive_item .event_location i,
+    body.skin_custom_color .event-col .event_archive_item .event_start i,
+    body.skin_custom_color .gallery_terms_list li.active a,
+    body.skin_custom_color .tp-caption .icon-btn:hover .icon_in_btn,
+    body.skin_custom_color .widget_pages ul.style_2 li a:hover .h6,
+    body.skin_custom_color .teacher_single_product_page > a:hover .title,
+    body.skin_custom_color .sidebar-area .widget ul li a:hover:after,
+    body.skin_custom_color div.pp_woocommerce .pp_gallery ul li a:hover,
+    body.skin_custom_color div.pp_woocommerce .pp_gallery ul li.selected a,
+    body.skin_custom_color .single_product_after_title .meta-unit.teacher:hover .value,
+    body.skin_custom_color .single_product_after_title .meta-unit i,
+    body.skin_custom_color .single_product_after_title .meta-unit .value a:hover,
+    body.skin_custom_color .woocommerce-breadcrumb a:hover,
+    body.skin_custom_color #footer_copyright .copyright_text a:hover,
+    body.skin_custom_color .widget_stm_recent_posts .widget_media .cats_w a:hover,
+    body.skin_custom_color .widget_pages ul.style_2 li a:hover,
+    body.skin_custom_color .sidebar-area .widget_categories ul li a:hover,
+    body.skin_custom_color .sidebar-area .widget ul li a:hover,
+    body.skin_custom_color .widget_categories ul li a:hover,
+    body.skin_custom_color .stm_product_list_widget li a:hover .title,
+    body.skin_custom_color .widget_contacts ul li .text a:hover,
+    body.skin_custom_color .sidebar-area .widget_pages ul.style_1 li a:focus .h6,
+    body.skin_custom_color .sidebar-area .widget_nav_menu ul.style_1 li a:focus .h6,
+    body.skin_custom_color .sidebar-area .widget_pages ul.style_1 li a:focus,
+    body.skin_custom_color .sidebar-area .widget_nav_menu ul.style_1 li a:focus,
+    body.skin_custom_color .sidebar-area .widget_pages ul.style_1 li a:active .h6,
+    body.skin_custom_color .sidebar-area .widget_nav_menu ul.style_1 li a:active .h6,
+    body.skin_custom_color .sidebar-area .widget_pages ul.style_1 li a:active,
+    body.skin_custom_color .sidebar-area .widget_nav_menu ul.style_1 li a:active,
+    body.skin_custom_color .sidebar-area .widget_pages ul.style_1 li a:hover .h6,
+    body.skin_custom_color .sidebar-area .widget_nav_menu ul.style_1 li a:hover .h6,
+    body.skin_custom_color .sidebar-area .widget_pages ul.style_1 li a:hover,
+    body.skin_custom_color .sidebar-area .widget_nav_menu ul.style_1 li a:hover,
+    body.skin_custom_color .widget_pages ul.style_1 li a:focus .h6,
+    body.skin_custom_color .widget_nav_menu ul.style_1 li a:focus .h6,
+    body.skin_custom_color .widget_pages ul.style_1 li a:focus,
+    body.skin_custom_color .widget_nav_menu ul.style_1 li a:focus,
+    body.skin_custom_color .widget_pages ul.style_1 li a:active .h6,
+    body.skin_custom_color .widget_nav_menu ul.style_1 li a:active .h6,
+    body.skin_custom_color .widget_pages ul.style_1 li a:active,
+    body.skin_custom_color .widget_nav_menu ul.style_1 li a:active,
+    body.skin_custom_color .widget_pages ul.style_1 li a:hover .h6,
+    body.skin_custom_color .widget_nav_menu ul.style_1 li a:hover .h6,
+    body.skin_custom_color .widget_pages ul.style_1 li a:hover,
+    body.skin_custom_color .widget_nav_menu ul.style_1 li a:hover,
+    body.skin_custom_color .see_more a:after,
+    body.skin_custom_color .see_more a,
+    body.skin_custom_color .transparent_header_off .header_main_menu_wrapper ul > li > ul.sub-menu > li a:hover,
+    body.skin_custom_color .stm_breadcrumbs_unit .navxtBreads > span a:hover,
+    body.skin_custom_color .btn-carousel-control,
+    body.skin_custom_color .post_list_main_section_wrapper .post_list_meta_unit .post_list_comment_num,
+    body.skin_custom_color .post_list_main_section_wrapper .post_list_meta_unit .date-m,
+    body.skin_custom_color .post_list_main_section_wrapper .post_list_meta_unit .date-d,
+    body.skin_custom_color .stats_counter h1,
+    body.skin_custom_color .yellow,
+    body.skin_custom_color ol li a:hover,
+    body.skin_custom_color ul li a:hover,
+    body.skin_custom_color .search-toggler,
+    .primary_color,
+    .mtc_h:hover,
+    body.classic_lms .header_top_bar .header_top_bar_socs ul li a:hover,
+    body.classic_lms .header_top_bar a:hover,
+    #footer .widget_stm_lms_popular_courses ul li a:hover .meta .h5.title,
+    body.classic_lms .stm_lms_wishlist_button a:hover i,
+    .classic_lms .post_list_main_section_wrapper .post_list_item_title:hover,
+    .stm_lms_courses__single.style_2 .stm_lms_courses__single--title h5:hover {
+        color: #4ed7a8;
+    }
+
+    body.skin_custom_color .triangled_colored_separator .triangle,
+    body.skin_custom_color .magic_line:after {
+        border-bottom-color: #4ed7a8;
+    }
+
+    body.rtl-demo .stm_testimonials_wrapper_style_2 .stm_lms_testimonials_single__content:after {
+        border-left-color: #195ec8;
+    }
+
+    body.skin_custom_color .blog_layout_grid .post_list_meta_unit .sticky_post,
+    body.skin_custom_color .blog_layout_list .post_list_meta_unit .sticky_post,
+    body.skin_custom_color .product_status.special,
+    body.skin_custom_color .view_type_switcher a:hover,
+    body.skin_custom_color .view_type_switcher a.view_list.active_list,
+    body.skin_custom_color .view_type_switcher a.view_grid.active_grid,
+    body.skin_custom_color .stm_archive_product_inner_unit .stm_archive_product_inner_unit_centered .stm_featured_product_price .price,
+    body.skin_custom_color .sidebar-area .widget_text .btn,
+    body.skin_custom_color .stm_product_list_widget.widget_woo_stm_style_2 li a .meta .stm_featured_product_price .price,
+    body.skin_custom_color .widget_tag_cloud .tagcloud a:hover,
+    body.skin_custom_color .sidebar-area .widget ul li a:after,
+    body.skin_custom_color .sidebar-area .socials_widget_wrapper .widget_socials li a,
+    body.skin_custom_color .socials_widget_wrapper .widget_socials li a,
+    body.skin_custom_color .gallery_single_view .gallery_img a:after,
+    body.skin_custom_color .course_table tr td.stm_badge .badge_unit,
+    body.skin_custom_color .widget_mailchimp .stm_mailchimp_unit .button,
+    body.skin_custom_color .textwidget .btn:active,
+    body.skin_custom_color .textwidget .btn:focus,
+    body.skin_custom_color .form-submit .submit:active,
+    body.skin_custom_color .form-submit .submit:focus,
+    body.skin_custom_color .button:focus,
+    body.skin_custom_color .button:active,
+    body.skin_custom_color .btn-default:active,
+    body.skin_custom_color .btn-default:focus,
+    body.skin_custom_color .button:hover,
+    body.skin_custom_color .textwidget .btn:hover,
+    body.skin_custom_color .form-submit .submit,
+    body.skin_custom_color .button,
+    body.skin_custom_color .btn-default,
+    .btn.btn-default:hover, .button:hover, .textwidget .btn:hover,
+    body.skin_custom_color .short_separator,
+    .sbc,
+    .sbc_h:hover,
+    .wpb-js-composer .vc_general.vc_tta.vc_tta-tabs.vc_tta-style-classic li.vc_tta-tab > a,
+    .wpb-js-composer .vc_general.vc_tta.vc_tta-tabs.vc_tta-style-classic li.vc_tta-tab > a:hover,
+    #header.transparent_header .header_2 .stm_lms_account_dropdown .dropdown button,
+    .stm_lms_courses_categories.style_3 .stm_lms_courses_category > a:hover,
+    .stm_lms_udemy_course .nav.nav-tabs > li a,
+    body.classic_lms .classic_style .nav.nav-tabs > li.active a,
+    .header_bottom:after,
+    .sbc:hover,
+    body.rtl-demo .stm_testimonials_wrapper_style_2 .stm_lms_testimonials_single__content {
+        background-color: #195ec8;
+    }
+
+    body.skin_custom_color .wpb_tabs .form-control:focus,
+    body.skin_custom_color .wpb_tabs .form-control:active,
+    body.skin_custom_color .woocommerce .cart-totals_wrap .shipping-calculator-button,
+    body.skin_custom_color .sidebar-area .widget_text .btn,
+    body.skin_custom_color .widget_tag_cloud .tagcloud a:hover,
+    body.skin_custom_color .icon_box.dark a:hover,
+    body.skin_custom_color .simple-carousel-bullets a.selected,
+    body.skin_custom_color .stm_sign_up_form .form-control:active,
+    body.skin_custom_color .stm_sign_up_form .form-control:focus,
+    body.skin_custom_color .form-submit .submit,
+    body.skin_custom_color .button,
+    body.skin_custom_color .btn-default,
+    .sbrc,
+    .sbrc_h:hover,
+    .vc_general.vc_tta.vc_tta-tabs,
+    body.skin_custom_color .blog_layout_grid .post_list_meta_unit,
+    body.skin_custom_color .blog_layout_grid .post_list_meta_unit .post_list_comment_num,
+    body.skin_custom_color .blog_layout_list .post_list_meta_unit .post_list_comment_num,
+    body.skin_custom_color .blog_layout_list .post_list_meta_unit,
+    #header.transparent_header .header_2 .stm_lms_account_dropdown .dropdown button {
+        border-color: #195ec8;
+    }
+
+    .header_2_top_bar__inner .top_bar_right_part .header_top_bar_socs ul li a:hover,
+    .secondary_color,
+    body.skin_custom_color .icon_box .icon_text > h3 > span,
+    body.skin_custom_color .stm_woo_archive_view_type_list .stm_featured_product_stock i,
+    body.skin_custom_color .stm_woo_archive_view_type_list .expert_unit_link:hover .expert,
+    body.skin_custom_color .stm_archive_product_inner_unit .stm_archive_product_inner_unit_centered .stm_featured_product_body a .title:hover,
+    body.skin_custom_color .stm_product_list_widget.widget_woo_stm_style_2 li a:hover .title,
+    body.skin_custom_color .blog_layout_grid .post_list_meta_unit .post_list_comment_num,
+    body.skin_custom_color .blog_layout_grid .post_list_meta_unit .date-m,
+    body.skin_custom_color .blog_layout_grid .post_list_meta_unit .date-d,
+    body.skin_custom_color .blog_layout_list .post_list_meta_unit .post_list_comment_num,
+    body.skin_custom_color .blog_layout_list .post_list_meta_unit .date-m,
+    body.skin_custom_color .blog_layout_list .post_list_meta_unit .date-d,
+    body.skin_custom_color .widget_stm_recent_posts .widget_media a:hover .h6,
+    body.skin_custom_color .widget_product_search .woocommerce-product-search:after,
+    body.skin_custom_color .widget_search .search-form > label:after,
+    body.skin_custom_color .sidebar-area .widget ul li a,
+    body.skin_custom_color .sidebar-area .widget_categories ul li a,
+    body.skin_custom_color .widget_contacts ul li .text a,
+    body.skin_custom_color .event-col .event_archive_item > a:hover .title,
+    body.skin_custom_color .stm_contact_row a:hover,
+    body.skin_custom_color .comments-area .commentmetadata i,
+    body.skin_custom_color .stm_post_info .stm_post_details .comments_num .post_comments:hover,
+    body.skin_custom_color .stm_post_info .stm_post_details .comments_num .post_comments i,
+    body.skin_custom_color .stm_post_info .stm_post_details .post_meta li a:hover span,
+    body.skin_custom_color .stm_post_info .stm_post_details .post_meta li i,
+    body.skin_custom_color .blog_layout_list .post_list_item_tags .post_list_divider,
+    body.skin_custom_color .blog_layout_list .post_list_item_tags a,
+    body.skin_custom_color .blog_layout_list .post_list_cats .post_list_divider,
+    body.skin_custom_color .blog_layout_list .post_list_cats a,
+    body.skin_custom_color .blog_layout_list .post_list_item_title a:hover,
+    body.skin_custom_color .blog_layout_grid .post_list_item_tags .post_list_divider,
+    body.skin_custom_color .blog_layout_grid .post_list_item_tags a,
+    body.skin_custom_color .blog_layout_grid .post_list_cats .post_list_divider,
+    body.skin_custom_color .blog_layout_grid .post_list_cats a,
+    body.skin_custom_color .blog_layout_grid .post_list_item_title:focus,
+    body.skin_custom_color .blog_layout_grid .post_list_item_title:active,
+    body.skin_custom_color .blog_layout_grid .post_list_item_title:hover,
+    body.skin_custom_color .stm_featured_products_unit .stm_featured_product_single_unit .stm_featured_product_single_unit_centered .stm_featured_product_body a .title:hover,
+    body.skin_custom_color .icon_box.dark a:hover,
+    body.skin_custom_color .post_list_main_section_wrapper .post_list_item_tags .post_list_divider,
+    body.skin_custom_color .post_list_main_section_wrapper .post_list_item_tags a,
+    body.skin_custom_color .post_list_main_section_wrapper .post_list_cats .post_list_divider,
+    body.skin_custom_color .post_list_main_section_wrapper .post_list_cats a,
+    body.skin_custom_color .post_list_main_section_wrapper .post_list_item_title:active,
+    body.skin_custom_color .post_list_main_section_wrapper .post_list_item_title:focus,
+    body.skin_custom_color .post_list_main_section_wrapper .post_list_item_title:hover,
+    body.skin_custom_color a:hover,
+    .secondary_color,
+    #header.transparent_header .header_2 .header_top .stm_lms_categories .heading_font,
+    #header.transparent_header .header_2 .header_top .stm_lms_categories i,
+    .classic_lms .post_list_main_section_wrapper .post_list_cats a,
+    .classic_lms .post_list_main_section_wrapper .post_list_item_tags a,
+    .stm_lms_courses__single__inner .stm_lms_courses__single--info_title a:hover h4 {
+        color: #195ec8;
+    }
+
+    a {
+        color: #195ec8;
+    }
+
+    body, .normal_font, body.rtl.rtl-demo .stm_testimonials_wrapper_style_2 .stm_lms_testimonials_single__excerpt p {
+        font-family: "Open Sans";
+        color: #273044;
+        font-size: 14px;
+    }
+
+    .btn {
+        font-family: Montserrat;
+        line-height: 14px;
+        font-size: 14px;
+    }
+
+    .header-menu {
+        font-family: Montserrat;
+        font-weight: normal;
+        color: #fff;
+    }
+
+    h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .nav-tabs > li > a, .member-name, .section-title, .user-name, .heading_font, .item-title, .acomment-meta, [type="reset"], .bp-subnavs, .activity-header, table, .widget_categories ul li a, .sidebar-area .widget ul li a, .select2-selection__rendered, blockquote, .select2-chosen, .vc_tta-tabs.vc_tta-tabs-position-top .vc_tta-tabs-container .vc_tta-tabs-list li.vc_tta-tab a, .vc_tta-tabs.vc_tta-tabs-position-left .vc_tta-tabs-container .vc_tta-tabs-list li.vc_tta-tab a {
+        font-family: Montserrat;
+        color: #273044;
+    }
+
+    h1, .h1 {
+        line-height: 55px;
+        word-spacing: -1px;
+        letter-spacing: -0.4px;
+        font-weight: 200;
+        font-size: 50px;
+    }
+
+    h2, .h2 {
+        line-height: 38px;
+        letter-spacing: -0.4px;
+        font-weight: 200;
+        font-size: 32px;
+    }
+
+    h3, .h3 {
+        line-height: 34px;
+        letter-spacing: -1px;
+        font-weight: 200;
+        font-size: 24px;
+    }
+
+    h4, .h4, blockquote {
+        line-height: 26px;
+        font-weight: 500;
+        font-size: 16px;
+    }
+
+    h5, .h5, .select2-selection__rendered {
+        line-height: 20px;
+        font-weight: 500;
+        font-size: 14px;
+    }
+
+    h6, .h6, .widget_pages ul li a, .widget_nav_menu ul li a, .footer_menu li a, .widget_categories ul li a, .sidebar-area .widget ul li a {
+        line-height: 12px;
+        font-weight: 400;
+        font-size: 12px;
+    }
+
+    #footer_top {
+        background-color: #414b4f;
+    }
+
+    #footer_bottom {
+        background-color: #ffffff;
+    }
+
+    #footer_bottom .widget_title h3 {
+        font-weight: 700;
+        color: #273044;
+        font-size: 18px;
+    }
+
+    #footer_bottom, .widget_contacts ul li .text,
+    .footer_widgets_wrapper .widget ul li a,
+    .widget_nav_menu ul.style_1 li a .h6,
+    .widget_pages ul.style_2 li a .h6,
+    #footer .stm_product_list_widget.widget_woo_stm_style_2 li a .meta .title,
+    .widget_pages ul.style_1 li a .h6 {
+        color: #aaaaaa;
+    }
+
+    .widget_pages ul.style_2 li a:after {
+        background-color: #aaaaaa;
+    }</style>
+    <style type="text/css" data-type="vc_shortcodes-custom-css">.vc_custom_1534238310373 {
+        margin-bottom: 0px !important;
+        background-position: 0 0 !important;
+        background-repeat: no-repeat !important;
+    }
+
+    .vc_custom_1536053689227 {
+        margin-bottom: 63px !important;
+        background-image: url(wp-content/uploads/sites/7/2018/09/Untitled-1-1-1-1-109f2.png) !important;
+    }
+
+    .vc_custom_1531998548740 {
+        margin-bottom: 0px !important;
+        padding-bottom: 46px !important;
+        background-color: #f0f4fa !important;
+    }
+
+    .vc_custom_1534239338510 {
+        margin-bottom: 0px !important;
+        background: #f0f4fa url(https://masterstudy.scdn4.secure.raxcdn.com/white-lms/wp-content/uploads/sites/7/2018/07/we_proud.png?id=287) !important;
+        background-position: 0 0 !important;
+        background-repeat: no-repeat !important;
+    }
+
+    .vc_custom_1532328330193 {
+        margin-bottom: 0px !important;
+    }
+
+    .vc_custom_1532327899226 {
+        margin-bottom: 0px !important;
+        background-color: #f0f4fa !important;
+    }
+
+    .vc_custom_1535369584754 {
+        margin-bottom: 7px !important;
+        background-color: #f0f4fa !important;
+    }
+
+    .vc_custom_1533037364435 {
+        padding-right: 6.55% !important;
+        padding-left: 6.55% !important;
+    }
+
+    .vc_custom_1531830215765 {
+        margin-bottom: 0px !important;
+    }
+
+    .vc_custom_1535366613275 {
+        margin-bottom: 40px !important;
+    }
+
+    .vc_custom_1535366761423 {
+        padding-bottom: 20px !important;
+    }
+
+    .vc_custom_1535366769840 {
+        padding-bottom: 20px !important;
+    }
+
+    .vc_custom_1535366786219 {
+        padding-bottom: 20px !important;
+    }
+
+    .vc_custom_1535368101130 {
+        margin-bottom: 44px !important;
+    }
+
+    .vc_custom_1531998219169 {
+        margin-bottom: 44px !important;
+    }
+
+    .vc_custom_1534239815041 {
+        padding: 0px !important;
+    }
+
+    .vc_custom_1534239801946 {
+        padding: 0px !important;
+    }
+
+    .vc_custom_1535368966565 {
+        margin-bottom: -9px !important;
+    }</style>
+    <noscript>
+        <style type="text/css">.wpb_animate_when_almost_visible {
+            opacity: 1;
+        }</style>
+    </noscript>
+    <meta name="googlebot" content="index, follow"/>
+
+</head>
+<body class="home page-template-default page page-id-7 stm_lms_button pmpro-body-has-access skin_custom_color online-light stm_preloader_1 wpb-js-composer js-comp-ver-5.6 vc_responsive"
+      ontouchstart="">
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MLKCH25"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<div id="wrapper">
+    <div id="header" class="transparent_header_off" data-color="">
+        <div class="header_default header_2">
+            <div class="header_top_bar header_2_top_bar">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="header_2_top_bar__inner">
+                                <div class="stm_lms_wpml_switcher">
+                                    <div class="pull-left language-switcher-unit">
+                                        <div class="stm_current_language dropdown_toggle" id="lang_dropdown"
+                                             data-toggle="dropdown"> English <i class="fa fa-chevron-down"></i></div>
+                                        <ul class="dropdown-menu lang_dropdown_menu" role="menu"
+                                            aria-labelledby="lang_dropdown">
+                                            <li role="presentation"><a role="menuitem" tabindex="-1"
+                                                                       href="#de">Deutsch</a></li>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1"
+                                                                       href="#it">Italian</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="top_bar_right_part">
+                                    <div class="stm_menu_toggler" data-text="Menu"></div>
+                                    <div class="header_main_menu_wrapper clearfix" style="margin-top:5px;">
+                                        <div class="pull-right hidden-xs right_buttons">
+                                            <div class="stm_lms_wishlist_button"><a href="lms-wishlist.html"
+                                                                                    data-text="Favorites"> <i
+                                                    class="far fa-bookmark mtc_h"></i> </a></div>
+                                            <div class="search-toggler-unit">
+                                                <div class="search-toggler" data-toggle="modal"
+                                                     data-target="#searchModal"><i class="fa fa-search"></i></div>
+                                            </div>
+                                            <div class="pull-right">
+                                                <div class="header_top_bar_socs">
+                                                    <ul class="clearfix">
+                                                        <li><a href='https://www.twitter.com/'><i
+                                                                class='fab fa-twitter'></i></a></li>
+                                                        <li><a href='https://www.instagram.com/'><i
+                                                                class='fab fa-instagram'></i></a></li>
+                                                        <li><a href='#'><i class='fab fa-behance'></i></a></li>
+                                                        <li><a href='#'><i class='fab fa-dribbble'></i></a></li>
+                                                        <li><a href='#'><i class='fab fa-flickr'></i></a></li>
+                                                        <li><a href='#'><i class='fab fa-git'></i></a></li>
+                                                        <li><a href='#'><i class='fab fa-linkedin'></i></a></li>
+                                                        <li><a href='#'><i class='fab fa-pinterest'></i></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="collapse navbar-collapse pull-right">
+                                            <ul class="header-menu clearfix">
+                                                <li id="menu-item-1322"
+                                                    class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home current-menu-ancestor current-menu-parent menu-item-has-children menu-item-1322">
+                                                    <a href="{% url 'index' %}"
+                                                       {% ifequal request.path '/' %}class="active"{% endifequal %}>Home
+                                                    </a>
+                                                </li>
+                                                <li id="menu-item-5"
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5">
+                                                    <a href="{% url 'courses:course_list' %}"
+                                                       {% if request.path|slice:'7' == '/course' %}class="active"{% endif %}>Courses
+                                                    </a>
+                                                </li>
+
+
+                                                <li id="menu-item-407"
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-407">
+                                                    <a href="#">Plans</a>
+                                                </li>
+                                                <li id="menu-item-408"
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-408">
+                                                    <a href="#">About Us</a></li>
+                                                <li id="menu-item-418"
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-418">
+                                                    <a href="#">Contact Us</a></li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="pull-right">
+                                        <div class="header_top_bar_socs">
+                                            <ul class="clearfix">
+                                                <li><a href='https://www.twitter.com/'><i
+                                                        class='fab fa-twitter'></i></a></li>
+                                                <li><a href='https://www.instagram.com/'><i
+                                                        class='fab fa-instagram'></i></a></li>
+                                                <li><a href='#'><i class='fab fa-behance'></i></a></li>
+                                                <li><a href='#'><i class='fab fa-dribbble'></i></a></li>
+                                                <li><a href='#'><i class='fab fa-flickr'></i></a></li>
+                                                <li><a href='#'><i class='fab fa-git'></i></a></li>
+                                                <li><a href='#'><i class='fab fa-linkedin'></i></a></li>
+                                                <li><a href='#'><i class='fab fa-pinterest'></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="header_top">
+                            <div class="logo-unit">
+                                <a href="{% url 'index' %}">
+                                    <img class="img-responsive logo_transparent_static visible"
+                                         src="https://masterstudy.scdn4.secure.raxcdn.com/white-lms/wp-content/uploads/sites/7/2018/08/MasterStudy_logo.svg"
+                                         style="width: 253px;"
+                                         alt="Education Online Masterstudy"/> </a>
+                            </div>
+                            <div class="center-unit">
+                                <div class="stm_courses_search">
+
+                                    <script>var stm_lms_search_value = '';</script>
+                                    <div class="stm_lms_courses_search vue_is_disabled" id="stm_lms_courses_search"
+                                         v-bind:class="{'is_vue_loaded' : vue_loaded}"> {{ search }}
+                                        <a
+                                                v-bind:href="'http://127.0.0.1:8000/course/list?search=' + url"
+                                                class="stm_lms_courses_search__button sbc"> <i
+                                                class="lnr lnr-magnifier"></i> </a>
+                                        <autocomplete
+                                                name="search"
+                                                placeholder="Search courses"
+                                                url="wp-json/stm-lms/v1/courses.json"
+                                                param="search"
+                                                anchor="value"
+                                                label="label"
+                                                :on-select="searchCourse"
+                                                :on-input="searching"
+                                                :on-ajax-loaded="loaded"
+                                                :debounce="1000"
+                                                model="search">
+
+                                        </autocomplete>
+                                    </div>
+                                </div>
+                                <div class="stm_header_links">
+                                    <a href="#"
+                                       class="stm_lms_bi_link normal_font">
+                                        <i class="lnr lnr-bullhorn secondary_color"></i>
+                                        <span>Become an Instructor</span>
+                                    </a> <a href="#" class="stm_lms_bi_link normal_font"
+                                            data-target=".stm-lms-modal-enterprise" data-lms-modal="enterprise"> <i
+                                        class="stmlms-case secondary_color"></i> <span>For Enterprise</span> </a></div>
+                            </div>
+                            <div class="right-unit">
+                                {% if request.user.is_authenticated %}
+                                    <div>
+                                        <a href="{% url 'users:user_info' %}" class="btn btn-default">
+                                            <i class="stmlms-user"></i>
+                                            <span>{{ user.username }}</span>
+                                        </a>
+                                        <a href="{% url 'logout' %}" class="btn btn-default"
+                                           data-text="Sign in">
+                                            <span>LogOut</span>
+                                        </a>
+
+                                    </div>
+                                    <a href="{% url 'users:mymessage' %}">
+                                        <div class="msg-num"><span id="MsgNum">{{ request.user.unread_nums }}</span>
+                                        </div>
+                                    </a>
+
+                                {% else %}
+
+                                    <a href="{% url 'login' %}?next={{ request.path }}">
+                                        <i class="stmlms-user"></i>
+                                        <span>Log in</span>
+                                    </a>
+                                    <a href="{% url "register" %}" class="btn btn-default" data-text="Sign in">
+                                        <span>Sign Up</span>
+                                    </a>
+                                {% endif %}
+                                <div class="stm_lms_wishlist_button">
+                                    <a href="#" data-text="Favorites">
+                                        <i class="lnr lnr-bookmark "></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="stm_header_top_search sbc"><i class="lnr lnr-magnifier"></i></div>
+                            <div class="stm_header_top_toggler mbc"><i class="lnr lnr-user"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<!--crumbs start-->
+{% block custom_crumbs %}
+    <section>
+        <div class="wp">
+            <ul class="crumbs">
+                <li><a href="{% url 'index' %}">Home</a></li>
+            </ul>
+        </div>
+    </section>
+{% endblock %}
+
+{% block content %}
+{% endblock %}
+
+
+
+
+
+<footer class="footer">
+    <div class="footer_wrapper">
+        <div id="footer_bottom">
+            <div class="footer_widgets_wrapper kek text-normal">
+                <div class="container">
+                    <div class="widgets cols_4 clearfix">
+                        <aside id="stm_text-2" class="widget stm_wp_widget_text">
+                            <div class="widget_title"><h3>About</h3></div>
+                            <div class="textwidget"><p>Masterstudy is Education WordPress theme featured by Learning
+                                Management System  for online education.<br/> Developed by <a
+                                        href="#">Masterstudy</a>.</p></div>
+                            <div class="socials_widget_wrapper socials_widget_wrapper__text"><a
+                                    href='https://www.facebook.com/' target='_blank'><i
+                                    class='fab fa-facebook'></i></a> <a href='https://www.twitter.com/' target='_blank'><i
+                                    class='fab fa-twitter'></i></a> <a href='https://www.instagram.com/'
+                                                                       target='_blank'><i
+                                    class='fab fa-instagram'></i></a></div>
+                        </aside>
+                        <aside id="contacts-2" class="widget widget_contacts">
+                            <div class="widget_title"><h3>Contact</h3></div>
+                            <ul class="widget_contacts_style_2">
+                                <li class="widget_contacts_address">
+                                    <div class="icon"><i class="fa-icon-stm_icon_pin"></i></div>
+                                    <div class="text">Egypt, Cairo </div>
+                                </li>
+                                <li class="widget_contacts_phone">
+                                    <div class="icon"><i class="fa-icon-stm_icon_phone"></i></div>
+                                    <div class="text">Tel.: </div>
+                                </li>
+                                <li class="widget_contacts_fax">
+                                    <div class="icon"><i class="fa-icon-stm_icon_fax"></i></div>
+                                    <div class="text">Fax: </div>
+                                </li>
+                                <li class="widget_contacts_email">
+                                    <div class="icon"><i class="fa fa-envelope"></i></div>
+                                    <div class="text"><a href="#">info@masterstudy.com</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </aside>
+                        <aside id="stm_pages-2" class="widget widget_pages">
+                            <div class="widget_title"><h3>Pages</h3></div>
+                            <ul class="style_2">
+                                <li class="page_item page-item-664"><a href="blog/index.html"><span
+                                        class="h6">Blog</span></a></li>
+                                <li class="page_item page-item-2"><a href="courses/index.html"><span
+                                        class="h6">Courses</span></a></li>
+                                <li class="page_item page-item-7 current_page_item"><a href="index.html"
+                                                                                       aria-current="page"><span
+                                        class="h6">Home</span></a></li>
+                                <li class="page_item page-item-183"><a href="membership-account/index.html"><span
+                                        class="h6">Membership Account</span></a></li>
+                                <li class="page_item page-item-667"><a href="shortcodes/index.html"><span class="h6">Shortcodes</span></a>
+                                </li>
+                                <li class="page_item page-item-669"><a href="typography/index.html"><span class="h6">Typography</span></a>
+                                </li>
+                            </ul>
+                        </aside>
+                        <aside id="stm_recent_posts-2" class="widget widget_stm_recent_posts">
+                            <div class="widget_title"><h3>Blog</h3></div>
+                            <div class="widget_media clearfix widget_media_style_2"><a
+                                    href="our-main-target-is-to-developing-yourself-as-a-leader/index.html"> <img
+                                    width="75" height="75"
+                                    src="{% static 'wp-content/uploads/sites/7/2018/08/photo-1517520287167-4bbf64a00d66-75x75.jpg' %}"
+                                    class="img-responsive wp-post-image" alt=""
+                                    srcset="https://masterstudy.scdn4.secure.raxcdn.com/white-lms/wp-content/uploads/sites/7/2018/08/photo-1517520287167-4bbf64a00d66-75x75.jpeg 75w, https://masterstudy.scdn4.secure.raxcdn.com/white-lms/wp-content/uploads/sites/7/2018/08/photo-1517520287167-4bbf64a00d66-150x150.jpeg 150w, https://masterstudy.scdn4.secure.raxcdn.com/white-lms/wp-content/uploads/sites/7/2018/08/photo-1517520287167-4bbf64a00d66-129x129.jpeg 129w, https://masterstudy.scdn4.secure.raxcdn.com/white-lms/wp-content/uploads/sites/7/2018/08/photo-1517520287167-4bbf64a00d66-122x120.jpeg 122w, https://masterstudy.scdn4.secure.raxcdn.com/white-lms/wp-content/uploads/sites/7/2018/08/photo-1517520287167-4bbf64a00d66-69x69.jpeg 69w, https://masterstudy.scdn4.secure.raxcdn.com/white-lms/wp-content/uploads/sites/7/2018/08/photo-1517520287167-4bbf64a00d66-50x50.jpeg 50w"
+                                    sizes="(max-width: 75px) 100vw, 75px"/> <span class="h6">Our main target is to &#8220;Developing Yourself as a Leader&#8221;</span>
+                            </a>
+                                <div class="cats_w"> August 9, 2018</div>
+                            </div>
+                            <div class="widget_media clearfix widget_media_style_2"><a
+                                    href="those-other-college-expenses/index.html"> <img width="75" height="75"
+                                                                                         src="{% static 'wp-content/uploads/sites/7/2015/06/photo-1490376840453-5f616fbebe5b-75x75.jpg' %}"
+                                                                                         class="img-responsive wp-post-image"
+                                                                                         alt=""
+                                                                                         srcset="https://masterstudy.scdn4.secure.raxcdn.com/white-lms/wp-content/uploads/sites/7/2015/06/photo-1490376840453-5f616fbebe5b-75x75.jpeg 75w,
+                                                                                          https://masterstudy.scdn4.secure.raxcdn.com/white-lms/wp-content/uploads/sites/7/2015/06/photo-1490376840453-5f616fbebe5b-150x150.jpeg 150w,
+                                                                                          https://masterstudy.scdn4.secure.raxcdn.com/white-lms/wp-content/uploads/sites/7/2015/06/photo-1490376840453-5f616fbebe5b-129x129.jpeg 129w,
+                                                                                           https://masterstudy.scdn4.secure.raxcdn.com/white-lms/wp-content/uploads/sites/7/2015/06/photo-1490376840453-5f616fbebe5b-122x120.jpeg 122w,
+                                                                                            https://masterstudy.scdn4.secure.raxcdn.com/white-lms/wp-content/uploads/sites/7/2015/06/photo-1490376840453-5f616fbebe5b-69x69.jpeg 69w,
+                                                                                             https://masterstudy.scdn4.secure.raxcdn.com/white-lms/wp-content/uploads/sites/7/2015/06/photo-1490376840453-5f616fbebe5b-50x50.jpeg 50w"
+                                                                                         sizes="(max-width: 75px) 100vw, 75px"/>
+                                <span class="h6">Those Other College Expenses You Aren`t Thinking About</span> </a>
+                                <div class="cats_w"> June 3, 2015</div>
+                            </div>
+                        </aside>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script type="text/javascript">var cf7_custom_image = 'https://masterstudy.scdn4.secure.raxcdn.com/white-lms/wp-content/themes/masterstudy-child/assets/img/';
+var daysStr = 'Days';
+var hoursStr = 'Hours';
+var minutesStr = 'Minutes';
+var secondsStr = 'Seconds';</script>
+<style id='stm-iconbox-style_1-inline-css' type='text/css'>
+    .module__f3eac30ffcdce927d15c39838e8e910f {
+        background: #f2f6fb !important;
+        color: #273044;
+    }
+
+    .module__f3eac30ffcdce927d15c39838e8e910f .icon {
+        height: 76px;
+    }
+
+    .module__f3eac30ffcdce927d15c39838e8e910f .icon i {
+        font-size: 51px;
+        color: #195ec8;
+    }
+
+    .module__df9ceca0e8527971a2077ab928c0fe8f {
+        background: #f2f6fb !important;
+        color: #273044;
+    }
+
+    .module__df9ceca0e8527971a2077ab928c0fe8f .icon {
+        height: 76px;
+    }
+
+    .module__df9ceca0e8527971a2077ab928c0fe8f .icon i {
+        font-size: 54px;
+        color: #195ec8;
+    }
+
+    .module__8c3033ebf56b4b964392037df86f8ff0 {
+        background: #f2f6fb !important;
+        color: #273044;
+    }
+
+    .module__8c3033ebf56b4b964392037df86f8ff0 .icon {
+        height: 76px;
+    }
+
+    .module__8c3033ebf56b4b964392037df86f8ff0 .icon i {
+        font-size: 50px;
+        color: #195ec8;
+    }
+</style>
+<style id='stm-course_category-style_1-inline-css' type='text/css'>
+    .stm_lms_courses_category a:hover h4 {
+        color: #195ec8
+    }
+</style>
+<script type='text/javascript'>
+    var wpcf7 = {
+        "apiSettings": {
+            "root": "https:\/\/masterstudy.stylemixthemes.com\/white-lms\/wp-json\/contact-form-7\/v1",
+            "namespace": "contact-form-7\/v1"
+        }, "cached": "1"
+    };
+</script>
+<script type='text/javascript'
+        src="{% static 'js/apie6b1.js' %}">
+
+</script>
+<script type='text/javascript'
+        src="{% static 'js/api4f51.js' %}">
+
+</script>
+<script type="text/javascript">(function (grecaptcha, sitekey, actions) {
+
+    var wpcf7recaptcha = {
+
+        execute: function (action) {
+            grecaptcha.execute(
+                sitekey,
+                {action: action}
+            ).then(function (token) {
+                var forms = document.getElementsByTagName('form');
+
+                for (var i = 0; i < forms.length; i++) {
+                    var fields = forms[i].getElementsByTagName('input');
+
+                    for (var j = 0; j < fields.length; j++) {
+                        var field = fields[j];
+
+                        if ('g-recaptcha-response' === field.getAttribute('name')) {
+                            field.setAttribute('value', token);
+                            break;
+                        }
+                    }
+                }
+            });
+        },
+
+        executeOnHomepage: function () {
+            wpcf7recaptcha.execute(actions['homepage']);
+        },
+
+        executeOnContactform: function () {
+            wpcf7recaptcha.execute(actions['contactform']);
+        },
+
+    };
+
+    grecaptcha.ready(
+        wpcf7recaptcha.executeOnHomepage
+    );
+
+    document.addEventListener('change',
+        wpcf7recaptcha.executeOnContactform, false
+    );
+
+    document.addEventListener('wpcf7submit',
+        wpcf7recaptcha.executeOnHomepage, false
+    );
+
+})(
+    grecaptcha,
+    '6Ld-nbYUAAAAAAwbm7Wsf0ZS0AlJkmZr1hdMcPua',
+    {"homepage": "homepage", "contactform": "contactform"}
+);
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-97204663-14">
+</script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'UA-97204663-14');
+</script>
+<script type="text/javascript" defer
+        src="{% static 'wp-content/cache/autoptimize/7/js/autoptimize_c9fdaefb34b5a997664dd1af0e4c1521.js' %}">
+
+</script>
+
+</body>
+</html>

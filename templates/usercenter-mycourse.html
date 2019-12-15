@@ -1,0 +1,49 @@
+{% extends 'usercenter-base.html' %}
+
+{% block title %}
+<title>MasterStudy</title>
+{% endblock %}
+
+{% block crumbs %}
+    <section>
+        <div class="wp">
+            <ul  class="crumbs">
+                <li><a href="{% url 'index' %}">Home</a>></li>
+                <li><a href="/user/home/">Personal center</a>></li>
+                <li>My courses</li>
+            </ul>
+        </div>
+    </section>
+{% endblock %}
+
+{% block right_content %}
+    <div class="right" >
+		<div class="personal_des Releasecont">
+			<div class="head">
+				<h1>My courses</h1>
+			</div>
+		</div>
+		<div class="personal_des permessage">
+			<div class="companycenter">
+				<div class="group_list brief">
+                    {% for my_course in my_courses %}
+                    <div class="module1_5 box">
+                        <a href="{% url 'courses:course_detail' my_course.course.id %}">
+                            <img width="214" height="190" class="scrollLoading" src="{{ MEDIA_URL }}{{ my_course.course.image }}"/>
+                        </a>
+                        <div class="des">
+                            <a href="{% url 'courses:course_detail' my_course.course.id %}"><h2>{{ my_course.course.name }}</h2></a>
+                            <span class="fl">Lesson：<i class="key">{{ my_course.course.learning_time }}</i></span>
+                            <span class="fr">Number of learners：{{ my_course.course.students }}</span>
+                        </div>
+                        <div class="bottom">
+                            <span class="fl">{{ my_course.course.course_org }}</span>
+                            <span class="star fr  notlogin" data-favid="15">{{ my_course.course.fav_nums }}</span>
+                        </div>
+                    </div>
+                    {% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}
