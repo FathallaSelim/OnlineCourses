@@ -1,5 +1,6 @@
 # OnlineCourses
 Online Courses Website  is scalable web application written in python (Django). Online Courses was designed to provide pleasant experience for users.
+![](Home.png)
 
 # Installation
 Assuming you use virtualenv, follow these steps to download and run the e-learning application in this directory:
