@@ -26,6 +26,6 @@ Visit http://127.0.0.1:8000/
 ## Compatibility
 Python 3.6
 
-Django 2.0
+Django 2.0.2
 
 SQLite
