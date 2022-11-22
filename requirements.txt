@@ -1,5 +1,5 @@
 Django==2.0.12
-Pillow==6.2.0	
+Pillow==9.3.0	
 	
 PyYAML==5.1	
 diff-match-patch==20121119
